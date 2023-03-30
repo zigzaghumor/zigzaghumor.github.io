@@ -7,14 +7,14 @@
   - Tracked analyst expectations, quarterly performance, and operational status of various comparable companies. Contributed to the production of Xiaomi’s quarterly reports.
     
 #### CUFE Course Thesis Template <span style="float:right">Jul. 2021</span>
-  **LaTeX**, Personal Project  
+  **$\LaTeX$**, Personal Project  
   *A Chinese LaTeX Template for Central University of Finance and Economics Course Thesis*
   - Adapted Word format to LaTeX using <a href="https://github.com/ElegantLaTeX/ElegantPaper">ElegantPaper</a>, based on course requirements.
   - Open-sourced template on <a href="https://github.com/zigzaghumor/CUFE-CourseThesis">GitHub</a> for fellow students to use.
 
     
 #### 2020 Contemporary Undergraduate Mathematical Contest in Modeling <span style="float:right">Nov. 2020</span>
-  **LaTeX**, Team leader. Won the First Prize in Beijing.  
+  **$\LaTeX$**, Team leader. Won the First Prize in Beijing.  
   *Optimized Strategy for “Through the Desert” Problem*
   - Utilized Floyd and Dijkstra algorithms to determine the optimal strategy for the problem and analyzed player revenue based on game details.
   - Used game theory to develop asynchronous strategy for multiple players, verified for rationality as player count increased.

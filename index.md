@@ -16,10 +16,11 @@ Alongside my academic pursuits, I possess a deep interest in computer technology
 
 ## Education
 
-- **The University of Warwick**, Coventry, UK <span style="float:right">09/2022 – 09/2023</span>
+  **The University of Warwick**, Coventry, UK <span style="float:right">09/2022 – 09/2023</span>  
   - *MSc* Economics and International Financial Economics
   - **Relevant Courses**: Advanced Macroeconomics, Advanced Microeconomics, Advanced Econometrics, Topics in Global Finance, The Economics of Financial Markets, Game Theory
-- **Central University of Finance and Economics**, Beijing, China <span style="float:right">09/2018 – 07/2022</span>
+
+  **Central University of Finance and Economics**, Beijing, China <span style="float:right">09/2018 – 07/2022</span>  
    - *Bachelor of Economics* National Economic Management
    - **Relevant Courses**: Python Programming (83), Econometrics (89), Mathematical Economics (98), Intermediate Macroeconomics(93), Intermediate Microeconomics (86), Real Analysis (94) etc.
    - **Awards**: National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship
