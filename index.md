@@ -6,7 +6,7 @@ layout: homepage
 
 I am a postgraduate student at the University of Warwick, studying at the Department of Economics. Prior to coming to the UK, I obtained a Bachelor's degree in Economics from the Central University of Finance and Economics in Beijing, China. 
 
-Alongside my academic pursuits, I possess a deep interest in computer technology and consider myself extremely tech-savvy. I particularly enjoy utilizing open-source software and possess a certain level of experience in using Linux. Additionally, my hobbies include rock music, science fiction, philosophy, and independent films.
+Alongside my academic pursuits, I possess a deep interest in computer technology and consider myself relatively tech-savvy. I particularly enjoy utilizing open-source software and possess a certain level of experience in using Linux. Additionally, my hobbies include rock music, science fiction, philosophy, and independent films.
 
 If you desire to view additional content from me, kindly visit my [blog](https://blog.zhihangzhao.com).
 
