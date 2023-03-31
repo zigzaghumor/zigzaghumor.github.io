@@ -8,6 +8,8 @@ I am a postgraduate student at the University of Warwick, studying at the Depart
 
 Alongside my academic pursuits, I possess a deep interest in computer technology and consider myself extremely tech-savvy. I particularly enjoy utilizing open-source software and possess a certain level of experience in using Linux. Additionally, my hobbies include rock music, science fiction, philosophy, and independent films.
 
+If you desire to view additional content from me, kindly visit my [blog](https://blog.zhihangzhao.com).
+
 ## Skills
 
 - **Programming Languages:** <i class="fab fa-python"></i> Python, <i class="fab fa-markdown"></i> Markdown, <i class="fab fa-git-alt"></i> Git, Stata, <i class="fab fa-r-project"></i>.
