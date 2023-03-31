@@ -1,5 +1,7 @@
 # zigzaghumor.github.io
 
+[![LICENSE](https://img.shields.io/github/license/zigzaghumor/zigzaghumor.github.io?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/zigzaghumor/zigzaghumor.github.io/blob/master/LICENSE)
+
 This is the source code of my homepage. 
 
 Based on this theme: <https://github.com/yaoyao-liu/minimal-light>.
