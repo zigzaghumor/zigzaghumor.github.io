@@ -3,7 +3,9 @@
 #### Beijing Xiaomi Technology Co., Ltd <span style="float:right">Feb. 2022 – Apr. 2022</span>
   **Internship**, Investor Relations Specialist  
   *Assisted in daily operations of Xiaomi’s Investor Relations Department.*
-  - Assisted in producing a detailed and well-received comparative company research report on Transsion, showcasing in-depth data analysis.
+  - Assisted in producing a detailed comparative company research report on Transsion, where I analyzed complex issues related to
+the company’s financial performance and industry competition using data analysis.
+  - Developed comprehensive report and presentation materials focusing on the electric vehicle industry, encompassing an in-depth analysis of the primary product development cycles of leading companies in the electric vehicle sector.
   - Tracked analyst expectations, quarterly performance, and operational status of various comparable companies. Contributed to the production of Xiaomi’s quarterly reports.
     
 #### CUFE Course Thesis Template <span style="float:right">Jul. 2021</span>
@@ -16,7 +18,7 @@
 #### 2020 Contemporary Undergraduate Mathematical Contest in Modeling <span style="float:right">Nov. 2020</span>
   **$\LaTeX$**, Team leader. Won the First Prize in Beijing.  
   *Optimized Strategy for “Through the Desert” Problem*
-  - Utilized Floyd and Dijkstra algorithms to determine the optimal strategy for the problem and analyzed player revenue based on game details.
+  - Utilized dynamic programming to determine the optimal strategy for the problem and analyzed player revenue based on game details.
   - Used game theory to develop asynchronous strategy for multiple players, verified for rationality as player count increased.
 
 #### Admissions Program Research <span style="float:right">Dec. 2019 – Feb. 2020</span>
