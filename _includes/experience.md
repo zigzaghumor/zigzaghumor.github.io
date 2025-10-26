@@ -1,5 +1,10 @@
 ## Experience
 
+#### Insta360 <span style="float:right">Jul. 2024 – Present</span>
+  **Full-time**, Data Analyst  
+  *Build BI dashboards and automated data ingestion to monitor channel KPIs.*
+  - Own tableau dashboard plus Python-based scraping jobs that keep revenue, traffic, and conversion metrics refreshed daily.
+
 #### Beijing Xiaomi Technology Co., Ltd <span style="float:right">Feb. 2022 – Apr. 2022</span>
   **Internship**, Investor Relations Specialist  
   *Assisted in daily operations of Xiaomi’s Investor Relations Department.*
