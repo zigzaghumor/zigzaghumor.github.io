@@ -1,9 +1,24 @@
 ## Experience
 
 #### Insta360 <span style="float:right">Jul. 2024 – Present</span>
-  **Full-time**, Data Analyst  
-  *Build BI dashboards and automated data ingestion to monitor channel KPIs.*
-  - Own tableau dashboard plus Python-based scraping jobs that keep revenue, traffic, and conversion metrics refreshed daily.
+**Full-time, CEO Management Trainee**
+
+##### Data Analyst, BI Team
+*Built BI systems and analytical frameworks to support decisions across marketing, product, and e-commerce.*
+
+- Built end-to-end BI dashboards and metric frameworks for paid media analysis, covering the full funnel from **impression to click, add-to-cart, and payment**, improving campaign monitoring, attribution, and review efficiency.
+- Designed and implemented a workforce analytics solution using **Python** and **Feishu OpenAPI**, automating data collection, cleaning, and budget-vs-actual labor analysis to improve resource planning accuracy.
+- Developed funnel analysis for cloud storage incentives, tracking **exposure, claim, retention, and payment** to identify conversion bottlenecks and support incentive strategy optimization.
+- Built the data infrastructure for a new drone business from **0 to 1**, covering serial-level logistics and activation tracking, revenue and attach-rate analysis, real-time sales monitoring, market exposure, and after-sales dashboards.
+
+##### Advertising & Growth Analytics, Ads Team
+*Supported paid media growth through attribution analysis, campaign optimization, and reporting automation.*
+
+- Built monitoring and attribution frameworks for **TikTok** campaigns across creatives, audience segments, and budget allocation, helping increase ROI from **6 to 10+** and drive **290% revenue growth**.
+- Partnered with product, operations, and engineering teams to build the advertising funnel for the cloud storage app from scratch, defining conversion paths, tracking logic, budget allocation, and reporting structure.
+- Led analytics support for **Black Friday** and **Christmas** campaigns by rebuilding the tracking framework and creating automated dashboards for daily monitoring, anomaly detection, and performance review.
+- Standardized weekly reporting workflows and automated creator ad naming conventions, improving attribution consistency and reducing manual effort by **80%**.
+
 
 #### Beijing Xiaomi Technology Co., Ltd <span style="float:right">Feb. 2022 – Apr. 2022</span>
   **Internship**, Investor Relations Specialist  

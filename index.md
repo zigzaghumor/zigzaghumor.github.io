@@ -4,15 +4,17 @@ layout: homepage
 
 ## About Me
 
-I am a Data Analyst at Insta360, working on BI.
+I’m a Data Analyst at Insta360, building BI systems and delivering insights that drive growth.
 
 If you desire to view additional content from me, kindly visit my [blog](https://blog.zhihangzhao.com).
 
 ## Skills
 
-- **Programming Languages:** <i class="fab fa-python"></i> Python, <i class="fab fa-markdown"></i> Markdown, <i class="fab fa-git-alt"></i> Git, Stata, <i class="fab fa-r-project"></i>.
-- **Software & Tools:** $\LaTeX$ , <i class="fab fa-microsoft"></i> Microsoft office, <i class="fab fa-linux"></i> Linux.
-- **Languages:** Chinese (Native), English (Fluent) 
+- **Data Analysis & Visualization:** <i class="fas fa-database"></i> SQL, <i class="fab fa-python"></i> Python, Tableau, <i class="fas fa-file-excel"></i> Excel.
+- **Data Platforms & Cloud Services:** <i class="fas fa-cloud"></i> Alibaba Cloud DataWorks, <i class="fab fa-aws"></i> AWS.
+- **AI & Agent Workflows:** <i class="fas fa-robot"></i> Claude Code, OpenAI Codex, ChatGPT, Agentic Workflow.
+- **Research & Development Tools:** <i class="fas fa-tools"></i> Stata, <i class="fab fa-r-project"></i> R, <i class="fab fa-git-alt"></i> Git, <i class="fab fa-linux"></i> Linux, <i class="fab fa-markdown"></i> Markdown, $\LaTeX$.
+- **Languages:** <i class="fas fa-language"></i> Chinese (Native), English (Fluent).
 
 ## Education
 
