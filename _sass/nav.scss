@@ -1,0 +1,140 @@
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-height: 64px;
+  padding: 0 1rem;
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px -20px var(--shadow);
+}
+
+.topnav .nav-home-badge {
+  position: absolute;
+  left: max(1rem, calc((100vw - 1100px) / 2 + 1rem));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--nav-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.topnav .nav-home-badge:hover {
+  color: var(--nav-text);
+}
+
+.topnav #myLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.topnav a.normal {
+  color: var(--nav-text);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-size: 0.98rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  border-radius: 999px;
+}
+
+.topnav a.normal:hover,
+.topnav a.normal:focus-visible {
+  background: var(--nav-hover-bg);
+  color: var(--nav-hover-text);
+  transform: translateY(-1px);
+}
+
+.topnav a.icon {
+  display: none;
+  color: var(--nav-text);
+  padding: 0.65rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.topnav a.icon .icon-wrap {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.topnav a.icon .icon-bars,
+.topnav a.icon .icon-xmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.topnav a.icon .icon-bars {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.topnav a.icon .icon-xmark {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.topnav a.icon.active .icon-bars {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.topnav a.icon.active .icon-xmark {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+@media print, screen and (max-width: 960px) {
+  .topnav {
+    justify-content: flex-start;
+    min-height: 60px;
+  }
+
+  .topnav .nav-home-badge {
+    position: static;
+    padding-right: 3rem;
+  }
+
+  .topnav #myLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--nav-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    transition: max-height 0.35s ease-in-out;
+  }
+
+  .topnav #myLinks.open {
+    max-height: 320px;
+  }
+
+  .topnav a.normal {
+    border-radius: 0;
+    padding: 1rem 1.25rem;
+  }
+
+  .topnav a.icon {
+    display: block;
+  }
+}
