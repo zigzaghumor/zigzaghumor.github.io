@@ -10,11 +10,11 @@ I work across analytics, automation, and decision support, with a focus on turni
 
 ## Skills
 
-- **Data Analysis & Visualization:** <i class="fas fa-database"></i> SQL, <i class="fab fa-python"></i> Python, Tableau, <i class="fas fa-file-excel"></i> Excel.
-- **Data Platforms & Cloud Services:** <i class="fas fa-cloud"></i> Alibaba Cloud DataWorks, <i class="fab fa-aws"></i> AWS.
-- **AI & Agent Workflows:** <i class="fas fa-robot"></i> Claude Code, OpenAI Codex, ChatGPT, Agentic Workflow.
-- **Research & Development Tools:** <i class="fas fa-tools"></i> Stata, <i class="fab fa-r-project"></i> R, <i class="fab fa-git-alt"></i> Git, <i class="fab fa-linux"></i> Linux, <i class="fab fa-markdown"></i> Markdown, $\LaTeX$.
-- **Languages:** <i class="fas fa-language"></i> Chinese (Native), English (Fluent).
+- **Data Analysis & Visualization:** SQL, <i class="fab fa-python"></i> Python, Tableau, Excel.
+- **Data Platforms & Cloud Services:** Alibaba Cloud DataWorks, <i class="fab fa-aws"></i>.
+- **AI & Agent Workflows:** Claude Code, OpenAI Codex, Agentic Workflow.
+- **Research & Development Tools:** Stata, <i class="fab fa-r-project"></i>, <i class="fab fa-git-alt"></i>, <i class="fab fa-linux"></i> Linux, <i class="fab fa-markdown"></i> Markdown, $\LaTeX$.
+- **Languages:** Chinese (Native), English (Fluent).
 
 ## Education
 
