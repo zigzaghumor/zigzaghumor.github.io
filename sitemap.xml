@@ -7,10 +7,24 @@
 >
 
 <url>
- <loc>https://zhihangzhao.com</loc>
- <priority>1.0</priority>
- <lastmod>2020-08-26</lastmod>
- <changefreq>weekly</changefreq>
+  <loc>https://zhihangzhao.com/</loc>
+  <priority>1.0</priority>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+
+<url>
+  <loc>https://zhihangzhao.com/experience/</loc>
+  <priority>0.8</priority>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://zhihangzhao.com/honors/</loc>
+  <priority>0.7</priority>
+  <lastmod>2026-06-01</lastmod>
+  <changefreq>monthly</changefreq>
 </url>
 
 </urlset>
