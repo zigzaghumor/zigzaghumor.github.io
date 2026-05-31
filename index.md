@@ -6,6 +6,8 @@ layout: homepage
 
 I’m a Data Analyst at Insta360, building BI systems and delivering insights that drive growth.
 
+I work across analytics, automation, and decision support, with a focus on turning operational complexity into clearer business action.
+
 ## Skills
 
 - **Data Analysis & Visualization:** <i class="fas fa-database"></i> SQL, <i class="fab fa-python"></i> Python, Tableau, <i class="fas fa-file-excel"></i> Excel.
@@ -24,7 +26,3 @@ I’m a Data Analyst at Insta360, building BI systems and delivering insights th
    - *Bachelor of Economics* National Economic Management
    - **Relevant Courses**: Python Programming (83), Econometrics (89), Mathematical Economics (98), Intermediate Macroeconomics(93), Intermediate Microeconomics (86), Real Analysis (94) etc.
    - **Awards**: National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship
-
-{% include_relative _includes/experience.md %}
-
-{% include_relative _includes/honors.md %}
