@@ -26,3 +26,5 @@ I work across analytics, automation, and decision support, with a focus on turni
    - *Bachelor of Economics* National Economic Management
    - **Relevant Courses**: Python Programming (83), Econometrics (89), Mathematical Economics (98), Intermediate Macroeconomics(93), Intermediate Microeconomics (86), Real Analysis (94) etc.
    - **Awards**: National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship
+
+{% include_relative _includes/summary.md %}
