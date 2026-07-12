@@ -20,3 +20,26 @@ View the live page using `localhost`:
 <http://localhost:4000>. You can get the html files in the `_site` folder.
 
 Huge thanks to [Yaoyao Liu](https://github.com/yaoyao-liu)
+
+### Bilingual content
+
+English pages keep the root URLs. Chinese pages use `/zh/`. Shared labels live in `_data/i18n.yml`, and `_data/translations.yml` maps corresponding pages.
+
+After changing English content, review the paired Chinese content and refresh its recorded source hash:
+
+```bash
+ruby scripts/check-translations.rb --update
+ruby scripts/check-translations.rb
+```
+
+### Upstream compatibility
+
+Theme-level additions are isolated under `_includes/local/` and `_sass/local-overrides.scss`. `_data/upstream.yml` records the reviewed upstream baseline and tracked theme paths.
+
+Check for new upstream changes and identify overlapping files:
+
+```powershell
+./scripts/check-upstream-compat.ps1 -Fetch
+```
+
+After integrating and validating upstream changes, update the baseline commit in `_data/upstream.yml`.

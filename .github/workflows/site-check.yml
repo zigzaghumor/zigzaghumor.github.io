@@ -1,0 +1,22 @@
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Check translation freshness
+        run: ruby scripts/check-translations.rb
+      - name: Build site
+        run: bundle exec jekyll build
+      - name: Validate localized output
+        run: ruby scripts/validate-site.rb

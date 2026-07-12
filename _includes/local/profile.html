@@ -1,0 +1,36 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% if site.avatar %}
+<span class="image avatar"><img src="{{ site.avatar | remove: './' | relative_url }}" alt="{{ strings.profile.portrait_alt }}" /></span>
+{% endif %}
+<h1>{{ strings.profile.name }}</h1>
+<position>{{ strings.profile.position }}</position>
+<br>
+<a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ strings.profile.affiliation }}</autocolor></a>
+<br>
+{% if site.email %}<email><a href="mailto:{{ site.email }}">{{ site.email }}</a></email>{% endif %}
+<br>
+<br>
+<div class="social-icons">
+  {% if site.cv_link %}
+  <a href="{{ site.cv_link | relative_url }}" aria-label="{{ strings.accessibility.cv }}">
+    <i class="ai ai-cv" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+  {% if site.github_link %}
+  <a href="{{ site.github_link }}" aria-label="{{ strings.accessibility.github }}">
+    <i class="fab fa-github" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+  {% if site.linkedin %}
+  <a href="{{ site.linkedin }}" aria-label="{{ strings.accessibility.linkedin }}">
+    <i class="fab fa-linkedin" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+  {% if site.twitter %}
+  <a href="{{ site.twitter }}" aria-label="{{ strings.accessibility.twitter }}">
+    <i class="fab fa-x-twitter" aria-hidden="true"></i>
+  </a>
+  {% endif %}
+</div>
+<br>

@@ -1,0 +1,9 @@
+repository: yaoyao-liu/yaoyaoliu-homepage
+branch: main
+baseline: 2b53bb40d19e6cce1badaaa23a4fb54379d75c43
+paths:
+  - _layouts
+  - _sass
+  - assets/css
+  - assets/js
+  - _includes

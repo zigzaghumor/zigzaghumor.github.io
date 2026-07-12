@@ -1,0 +1,20 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+<div class="contact-panel" id="contact" role="region" aria-labelledby="contact-title">
+  <h2 id="contact-title">{{ strings.contact.title }}</h2>
+  <p>{{ strings.contact.intro }}</p>
+  <div class="contact-actions">
+    <a class="contact-action" href="mailto:{{ site.email }}?subject=Collaboration%20Inquiry">
+      <strong>{{ strings.contact.collaboration }}</strong>
+      <span>{{ strings.contact.collaboration_detail }}</span>
+    </a>
+    <a class="contact-action" href="mailto:{{ site.email }}?subject=Career%20Opportunity">
+      <strong>{{ strings.contact.career }}</strong>
+      <span>{{ strings.contact.career_detail }}</span>
+    </a>
+    <a class="contact-action" href="{{ site.linkedin }}" rel="noopener">
+      <strong>{{ strings.contact.connect }}</strong>
+      <span>{{ strings.contact.connect_detail }}</span>
+    </a>
+  </div>
+</div>

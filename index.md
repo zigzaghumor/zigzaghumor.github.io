@@ -1,5 +1,10 @@
 ---
 layout: homepage
+lang: en
+translation_key: home
+title: Zhihang Zhao
+permalink: /
+description: Zhihang Zhao is a Data Analyst at Insta360, working across analytics, automation, and decision support.
 mathjax: true
 ---
 
@@ -37,3 +42,5 @@ I work across analytics, automation, and decision support, with a focus on turni
    - **Awards**: National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship
 
 {% include_relative _includes/summary.md %}
+
+{% include local/contact.html %}

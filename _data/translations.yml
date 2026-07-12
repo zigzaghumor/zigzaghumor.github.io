@@ -1,0 +1,26 @@
+home:
+  en: /
+  zh-CN: /zh/
+  source: index.md
+  target: zh/index.md
+  source_page: index.md
+  target_page: zh/index.md
+  source_hash: c15eef980907e1b7dee3a02662ca1f55e1e1906220fa13ec54b7e6a5d4a46e34
+
+experience:
+  en: /experience/
+  zh-CN: /zh/experience/
+  source: _includes/experience.md
+  target: _includes/local/content/zh-CN/experience.md
+  source_page: experience.md
+  target_page: zh/experience.md
+  source_hash: 1d7ec9fc9c5ab2e4eff35202891d00a8be4ff8d09c9b4fb9cdd878e558e2a877
+
+honors:
+  en: /honors/
+  zh-CN: /zh/honors/
+  source: _includes/honors.md
+  target: _includes/local/content/zh-CN/honors.md
+  source_page: honors.md
+  target_page: zh/honors.md
+  source_hash: 7b1c6e4169f4216d1a6842e7d1e28c32ff5256aefc4944238d22d7450a8c5bd7
