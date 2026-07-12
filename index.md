@@ -18,11 +18,19 @@ I work across analytics, automation, and decision support, with a focus on turni
 
 ## Education
 
-  **The University of Warwick**, Coventry, UK <span style="float:right">09/2022 – 09/2023</span>  
+<div class="dated-row">
+  <span><strong>The University of Warwick</strong>, Coventry, UK</span>
+  <time datetime="2022-09">09/2022 – 09/2023</time>
+</div>
+
   - *MSc* Economics and International Financial Economics
   - **Relevant Courses**: Advanced Macroeconomics, Advanced Microeconomics, Advanced Econometrics, Topics in Global Finance, The Economics of Financial Markets, Game Theory
 
-  **Central University of Finance and Economics**, Beijing, China <span style="float:right">09/2018 – 07/2022</span>  
+<div class="dated-row">
+  <span><strong>Central University of Finance and Economics</strong>, Beijing, China</span>
+  <time datetime="2018-09">09/2018 – 07/2022</time>
+</div>
+
    - *Bachelor of Economics* National Economic Management
    - **Relevant Courses**: Python Programming (83), Econometrics (89), Mathematical Economics (98), Intermediate Macroeconomics(93), Intermediate Microeconomics (86), Real Analysis (94) etc.
    - **Awards**: National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship

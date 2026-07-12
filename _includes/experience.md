@@ -1,6 +1,9 @@
 # Experience
 
-## Insta360 <span style="float:right">Jul. 2024 – Present</span>
+<div class="dated-heading">
+  <h2>Insta360</h2>
+  <time datetime="2024-07">Jul. 2024 – Present</time>
+</div>
 
 **Full-time, CEO Management Trainee**
 
@@ -22,7 +25,10 @@
 - Led analytics support for **Black Friday** and **Christmas** campaigns by rebuilding the tracking framework and creating automated dashboards for daily monitoring, anomaly detection, and performance review.
 - Standardized weekly reporting workflows and automated creator ad naming conventions, improving attribution consistency and reducing manual effort by **80%**.
 
-## Beijing Xiaomi Technology Co., Ltd <span style="float:right">Feb. 2022 – Apr. 2022</span>
+<div class="dated-heading">
+  <h2>Beijing Xiaomi Technology Co., Ltd</h2>
+  <time datetime="2022-02">Feb. 2022 – Apr. 2022</time>
+</div>
 
   **Internship**, Investor Relations Specialist  
   *Assisted in daily operations of Xiaomi’s Investor Relations Department.*

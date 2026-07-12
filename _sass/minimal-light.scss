@@ -255,6 +255,58 @@ h2 {
 
 section > h2:first-child { margin-top: 0; }
 
+.dated-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  margin: 52px 0 14px;
+  padding-bottom: 9px;
+  border-bottom: 1.5px solid rgba(19, 41, 75, 0.15);
+}
+
+.dated-heading h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.dated-heading time,
+.dated-row time,
+.honors-list time {
+  color: #4d4d4d;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dated-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  margin: 0 0 12px;
+}
+
+.honors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section .honors-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  margin: 0 0 12px;
+  line-height: 1.62;
+}
+
+.honors-list sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   h1, h3, h4, h5, h6 {
     color:rgb(62, 183, 240);
@@ -567,6 +619,19 @@ footer {
     box-shadow: 0 4px 16px rgba(19, 41, 75, 0.16);
   }
 
+  .dated-heading,
+  .dated-row,
+  section .honors-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+  }
+
+  .dated-heading time,
+  .dated-row time,
+  .honors-list time {
+    justify-self: start;
+  }
+
   #head1o2 {
     visibility: hidden;
   }
@@ -611,6 +676,16 @@ footer {
 
   h2 {
     border-bottom-color: rgba(62, 183, 240, 0.28);
+  }
+
+  .dated-heading {
+    border-bottom-color: rgba(62, 183, 240, 0.28);
+  }
+
+  .dated-heading time,
+  .dated-row time,
+  .honors-list time {
+    color: #c8cad0;
   }
 
   a:hover {
