@@ -1,6 +1,7 @@
 {% assign page_lang = page.lang | default: site.lang | default: 'en' %}
 {% assign strings = site.data.i18n[page_lang] %}
 <nav class="topnav" aria-label="{{ strings.accessibility.primary_navigation }}">
+  {% include local/language-switch.html %}
   <div id="myLinks">
     {% include local/navigation.html %}
   </div>

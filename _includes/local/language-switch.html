@@ -1,0 +1,14 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% assign translations = site.data.translations[page.translation_key] %}
+{% if page_lang == 'zh-CN' %}
+  {% assign switch_lang = 'en' %}
+  {% assign switch_url = translations.en | default: '/' %}
+{% else %}
+  {% assign switch_lang = 'zh-CN' %}
+  {% assign switch_url = translations['zh-CN'] | default: '/zh/' %}
+{% endif %}
+<a class="normal right language-link" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}" hreflang="{{ switch_lang }}" rel="alternate" aria-label="{{ strings.navigation.switch_aria }}">
+  <i class="fa-solid fa-language" aria-hidden="true"></i>
+  <span>{{ strings.navigation.switch_label }}</span>
+</a>
