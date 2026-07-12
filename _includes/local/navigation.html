@@ -1,0 +1,22 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% assign translations = site.data.translations[page.translation_key] %}
+{% if page_lang == 'zh-CN' %}
+  {% assign home_url = '/zh/' %}
+  {% assign experience_url = '/zh/experience/' %}
+  {% assign honors_url = '/zh/honors/' %}
+  {% assign switch_lang = 'en' %}
+  {% assign switch_url = translations.en | default: '/' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign experience_url = '/experience/' %}
+  {% assign honors_url = '/honors/' %}
+  {% assign switch_lang = 'zh-CN' %}
+  {% assign switch_url = translations['zh-CN'] | default: '/zh/' %}
+{% endif %}
+<a class="normal right language-link" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}" hreflang="{{ switch_lang }}" aria-label="{{ strings.navigation.switch_aria }}">{{ strings.navigation.switch_label }}</a>
+<a class="normal" href="https://blog.zhihangzhao.com" target="_blank" rel="noopener">{{ strings.navigation.blog }}</a>
+<a class="normal" href="{{ home_url | append: '#contact' | relative_url }}">{{ strings.navigation.contact }}</a>
+<a class="normal" href="{{ honors_url | relative_url }}">{{ strings.navigation.honors }}</a>
+<a class="normal" href="{{ experience_url | relative_url }}">{{ strings.navigation.experience }}</a>
+<a class="normal" href="{{ home_url | relative_url }}">{{ strings.navigation.home }}</a>

@@ -1,5 +1,6 @@
 # Basic Information 
 title: Zhihang Zhao
+lang: en
 position: Business Intelligence Specialist
 affiliation: Insta360
 affiliation_link: https://www.insta360.com/
@@ -39,3 +40,5 @@ exclude:
   - README.md
   - LICENSE
   - minimal-light.gemspec
+  - scripts
+  - vendor

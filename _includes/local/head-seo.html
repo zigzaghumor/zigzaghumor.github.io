@@ -1,0 +1,42 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% assign profile_name = strings.profile.name | default: site.title %}
+{% assign profile_affiliation = strings.profile.affiliation | default: site.affiliation %}
+{% if page.translation_key == 'home' %}
+  {% assign document_title = page.title | default: profile_name | append: ' | ' | append: profile_affiliation %}
+{% else %}
+  {% assign document_title = page.title | append: ' | ' | append: profile_name | append: ' | ' | append: profile_affiliation %}
+{% endif %}
+{% assign page_path = page.permalink | default: page.url | default: '/' %}
+{% assign page_url = site.canonical | append: page_path %}
+{% if page_lang == 'zh-CN' %}
+  {% assign og_locale = 'zh_CN' %}
+  {% assign alternate_locale = 'en_US' %}
+{% else %}
+  {% assign og_locale = 'en_US' %}
+  {% assign alternate_locale = 'zh_CN' %}
+{% endif %}
+<title>{{ document_title | strip }}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ page.description | default: site.description }}">
+{% if site.keywords %}<meta name="keywords" content="{{ site.keywords }}">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ document_title | strip }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:site_name" content="{{ profile_name }} | {{ profile_affiliation }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:locale" content="{{ og_locale }}">
+<meta property="og:locale:alternate" content="{{ alternate_locale }}">
+{% if site.avatar %}<meta property="og:image" content="{{ site.canonical }}/{{ site.avatar | remove: './' }}">{% endif %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ document_title | strip }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+{% if site.avatar %}<meta name="twitter:image" content="{{ site.canonical }}/{{ site.avatar | remove: './' }}">{% endif %}
+{% if site.canonical %}<link rel="canonical" href="{{ page_url }}" />{% endif %}
+{% assign translations = site.data.translations[page.translation_key] %}
+{% if translations %}
+<link rel="alternate" hreflang="en" href="{{ site.canonical }}{{ translations.en }}" />
+<link rel="alternate" hreflang="zh-CN" href="{{ site.canonical }}{{ translations['zh-CN'] }}" />
+<link rel="alternate" hreflang="x-default" href="{{ site.canonical }}{{ translations.en }}" />
+{% endif %}

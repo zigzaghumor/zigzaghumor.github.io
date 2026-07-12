@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
-    <title>404 Not Found</title>
+    <title>404 Not Found | 页面未找到</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,10 @@
     <div class="wrapper" style="margin-top: 4rem; text-align: center;">
       <main>
         <h1 class="page-title">404 Not Found</h1>
-        <p class="page-lead">This is not the web page you are looking for.</p>
-        <p>You will be redirected to the homepage in 5 seconds.</p>
-        <p><a href="{{ '/' | relative_url }}">Return home now</a></p>
+        <p class="page-lead">This page could not be found.</p>
+        <p lang="zh-CN">未找到该页面。</p>
+        <p>You will be redirected to the homepage in 5 seconds. <span lang="zh-CN">页面将在 5 秒后返回首页。</span></p>
+        <p><a href="{{ '/' | relative_url }}">Return home / <span lang="zh-CN">返回首页</span></a></p>
         <script>
           window.setTimeout(function () {
             window.location.href = '/';
