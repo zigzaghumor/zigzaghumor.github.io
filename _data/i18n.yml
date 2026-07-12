@@ -6,7 +6,7 @@ en:
     contact: Contact
     blog: Blog
     switch_label: 中文
-    switch_aria: Switch to Chinese
+    switch_aria: Switch to the Chinese version
   profile:
     name: Zhihang Zhao
     position: Business Intelligence Specialist
@@ -40,8 +40,8 @@ en:
     honors: 荣誉奖项
     contact: 联系我
     blog: 博客
-    switch_label: EN
-    switch_aria: 切换到英文
+    switch_label: English
+    switch_aria: 切换到英文版本
   profile:
     name: Zhihang Zhao
     position: 商业智能专员

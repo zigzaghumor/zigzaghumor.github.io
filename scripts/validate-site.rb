@@ -26,7 +26,9 @@ pages.each do |relative_path, (lang, canonical)|
   %w[en zh-CN x-default].each do |hreflang|
     errors << "#{relative_path}: missing hreflang #{hreflang}" unless html.include?(%(hreflang="#{hreflang}"))
   end
-  errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("hreflang=")
+  errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("fa-language") && html.include?("hreflang=")
+  errors << "#{relative_path}: language switch must remain visible before the collapsible links" unless html.match?(/language-link.*?<div id="myLinks">/m)
+  errors << "#{relative_path}: Inter font stylesheet missing" unless html.include?("family=Inter")
 end
 
 %w[index.html zh/index.html].each do |relative_path|
