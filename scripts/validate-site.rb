@@ -28,7 +28,17 @@ pages.each do |relative_path, (lang, canonical)|
   end
   errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("fa-language") && html.include?("hreflang=")
   errors << "#{relative_path}: language switch must remain visible before the collapsible links" unless html.match?(/language-link.*?<div id="myLinks">/m)
-  errors << "#{relative_path}: Inter font stylesheet missing" unless html.include?("family=Inter")
+  unless html.include?("family=Crimson+Pro") && html.include?("family=Source+Sans+3")
+    errors << "#{relative_path}: upstream font stylesheets missing"
+  end
+
+  if lang == "zh-CN"
+    unless html.include?("family=Noto+Sans+SC") && html.include?("family=Noto+Serif+SC")
+      errors << "#{relative_path}: Chinese fallback font stylesheets missing"
+    end
+  elsif html.include?("family=Noto+Sans+SC") || html.include?("family=Noto+Serif+SC")
+    errors << "#{relative_path}: Chinese fallback fonts should load only on Chinese pages"
+  end
 end
 
 %w[index.html zh/index.html].each do |relative_path|
