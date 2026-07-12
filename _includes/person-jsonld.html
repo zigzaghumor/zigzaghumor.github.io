@@ -1,0 +1,23 @@
+{% capture person_url %}{{ site.canonical }}/{% endcapture %}
+{% capture person_image %}{{ site.canonical }}/{{ site.avatar | remove: './' }}{% endcapture %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ person_url | append: '#person' | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "url": {{ person_url | jsonify }},
+  "image": {{ person_image | jsonify }},
+  "jobTitle": {{ site.position | jsonify }},
+  "worksFor": {
+    "@type": "Organization",
+    "name": {{ site.affiliation | jsonify }},
+    "url": {{ site.affiliation_link | jsonify }}
+  },
+  "sameAs": [
+    {{ site.github_link | jsonify }},
+    {{ site.linkedin | jsonify }},
+    {{ site.twitter | jsonify }}
+  ]
+}
+</script>

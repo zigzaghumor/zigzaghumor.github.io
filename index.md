@@ -1,5 +1,6 @@
 ---
 layout: homepage
+mathjax: true
 ---
 
 ## About Me
