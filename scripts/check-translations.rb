@@ -29,7 +29,8 @@ translations.each do |key, entry|
   end
   next unless [source, target, source_page, target_page].all? { |path| File.file?(path) }
 
-  current_hash = Digest::SHA256.file(source).hexdigest
+  normalized_source = File.binread(source).gsub("\r\n", "\n")
+  current_hash = Digest::SHA256.hexdigest(normalized_source)
   if UPDATE
     entry["source_hash"] = current_hash
   elsif current_hash != entry["source_hash"]
