@@ -41,3 +41,4 @@ exclude:
   - LICENSE
   - minimal-light.gemspec
   - scripts
+  - vendor
