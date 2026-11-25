@@ -2,44 +2,42 @@
 
 [![LICENSE](https://img.shields.io/github/license/zigzaghumor/zigzaghumor.github.io?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/zigzaghumor/zigzaghumor.github.io/blob/master/LICENSE)
 
-This is the source code of my homepage. 
+Source code for my personal homepage ([zhihangzhao.com](https://zhihangzhao.com)), built with Jekyll and adapted from [yaoyao-liu/yaoyaoliu-homepage](https://github.com/yaoyao-liu/yaoyaoliu-homepage) / [minimal-light](https://github.com/yaoyao-liu/minimal-light).
 
-Based on this theme: <https://github.com/yaoyao-liu/minimal-light>.
+### Local Development with Jekyll
 
-### Using Locally with Jekyll
-
-You need to install [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/) fisrt.
-
-Install and run:
+Install [Ruby](https://www.ruby-lang.org/en/) and [Jekyll](https://jekyllrb.com/) first, then run:
 
 ```bash
 bundle install
-bundle exec jekyll server
+bundle exec jekyll serve
 ```
-View the live page using `localhost`:
-<http://localhost:4000>. You can get the html files in the `_site` folder.
 
-Huge thanks to [Yaoyao Liu](https://github.com/yaoyao-liu)
+Preview the site at <http://localhost:4000>. Generated static files are written to `_site/`.
 
-### Bilingual content
+### Bilingual Content
 
-English pages keep the root URLs. Chinese pages use `/zh/`. Shared labels live in `_data/i18n.yml`, and `_data/translations.yml` maps corresponding pages.
+English pages are served at the root URLs (`/`, `/experience/`, `/honors/`), and Chinese pages live under `/zh/`. Shared UI strings live in `_data/i18n.yml`, while `_data/translations.yml` tracks page pairs and source hashes.
 
-After changing English content, review the paired Chinese content and refresh its recorded source hash:
+After editing English content, update the paired Chinese content and refresh the recorded hashes:
 
 ```bash
 ruby scripts/check-translations.rb --update
 ruby scripts/check-translations.rb
 ```
 
-### Upstream compatibility
+### Upstream Compatibility
 
-Theme-level additions are isolated under `_includes/local/` and `_sass/local-overrides.scss`. `_data/upstream.yml` records the reviewed upstream baseline and tracked theme paths.
+Upstream layouts and partials (`_layouts/`, `_includes/head.html`, `_includes/topnav.html`, `_includes/hero.html`, `_includes/page-end.html`, `_includes/footer.html`, `_sass/minimal-light.scss`, `_sass/nav.scss`) track `yaoyao-liu/yaoyaoliu-homepage`. Local bilingual, SEO, dark-mode, and layout customizations are isolated under `_includes/local/` and `_sass/local-overrides.scss`.
 
-Check for new upstream changes and identify overlapping files:
+Check for upstream updates and overlapping tracked paths:
 
 ```powershell
 ./scripts/check-upstream-compat.ps1 -Fetch
 ```
 
-After integrating and validating upstream changes, update the baseline commit in `_data/upstream.yml`.
+After integrating and verifying upstream updates, record the reviewed commit in `_data/upstream.yml`.
+
+### Acknowledgements
+
+Thanks to [Yaoyao Liu](https://github.com/yaoyao-liu) for the original Minimal Light theme and homepage template.

@@ -1,0 +1,71 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% assign avatar_path = site.avatar | remove: './' %}
+<header class="hero">
+  {% if site.avatar %}
+  <span class="image avatar">
+    <img src="{{ avatar_path | relative_url }}" alt="{{ strings.profile.portrait_alt }}" />
+  </span>
+  {% endif %}
+
+  <div class="hero-text">
+    <h1>{{ strings.profile.name }}{% if site.title_native %} <span class="hero-native">{{ site.title_native }}</span>{% endif %}</h1>
+
+    {% if strings.profile.position %}
+    <div class="hero-position">{{ strings.profile.position }}</div>
+    {% endif %}
+
+    <p class="hero-affil">
+      {% if site.departments %}
+      <span class="hero-affil-depts">
+        {% for d in site.departments %}
+        <a href="{{ d.link }}" target="_blank" rel="noopener noreferrer">{{ d.name }}</a>{% if d.note %} ({{ d.note }}){% endif %}<br>
+        {% endfor %}
+      </span>
+      {% endif %}
+      {% if strings.profile.affiliation %}
+      <a href="{{ site.affiliation_link }}" target="_blank" rel="noopener noreferrer">{{ strings.profile.affiliation }}</a>
+      {% endif %}
+    </p>
+
+    <div class="hero-links{% if site.link_type == 'icon' %} icon-only{% endif %}">
+      {% if site.email %}
+      {% assign hero_mail = site.email | replace: ' (at) ', '@' | replace: '(at)', '@' | replace: ' [at] ', '@' | strip %}
+      <a class="hero-pill" href="mailto:{{ hero_mail }}" title="{{ hero_mail }}" aria-label="{{ strings.accessibility.email }}">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>{{ strings.links.email }}</span>
+      </a>
+      {% endif %}
+      {% if site.google_scholar %}
+      <a class="hero-pill" href="{{ site.google_scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar">
+        <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+      </a>
+      {% endif %}
+      {% if site.cv_link %}
+      <a class="hero-pill" href="{{ site.cv_link | relative_url }}" target="_blank" rel="noopener noreferrer" title="{{ strings.links.cv }}" aria-label="{{ strings.accessibility.cv }}">
+        <i class="fa-regular fa-file-lines" aria-hidden="true"></i><span>{{ strings.links.cv }}</span>
+      </a>
+      {% endif %}
+      {% if site.github_link %}
+      <a class="hero-pill" href="{{ site.github_link }}" target="_blank" rel="noopener noreferrer" title="{{ strings.links.github }}" aria-label="{{ strings.accessibility.github }}">
+        <i class="fab fa-github" aria-hidden="true"></i><span>{{ strings.links.github }}</span>
+      </a>
+      {% endif %}
+      {% if site.linkedin %}
+      <a class="hero-pill" href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer" title="{{ strings.links.linkedin }}" aria-label="{{ strings.accessibility.linkedin }}">
+        <i class="fab fa-linkedin" aria-hidden="true"></i><span>{{ strings.links.linkedin }}</span>
+      </a>
+      {% endif %}
+      {% if site.twitter %}
+      <a class="hero-pill" href="{{ site.twitter }}" target="_blank" rel="noopener noreferrer" title="{{ strings.links.twitter }}" aria-label="{{ strings.accessibility.twitter }}">
+        <i class="fab fa-x-twitter" aria-hidden="true"></i><span>{{ strings.links.twitter }}</span>
+      </a>
+      {% endif %}
+      {% if site.bluesky %}
+      <a class="hero-pill" href="{{ site.bluesky }}" target="_blank" rel="noopener noreferrer" title="Bluesky" aria-label="Bluesky">
+        <i class="fab fa-bluesky" aria-hidden="true"></i><span>Bluesky</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</header>
+<hr class="hero-rule">

@@ -1,0 +1,70 @@
+{% include local/head-seo.html %}
+
+<link rel="icon" media="(prefers-color-scheme: dark)" href="{{ site.favicon_dark | remove: './' | relative_url }}" type="image/png" />
+<link rel="icon" media="(prefers-color-scheme: light)" href="{{ site.favicon | remove: './' | relative_url }}" type="image/png" />
+<link rel="icon" href="{{ site.favicon | remove: './' | relative_url }}" type="image/png" />
+<meta name="theme-color" content="#13294B" />
+
+{% include font-links.html %}
+{% if include.home %}
+{% include person-jsonld.html %}
+{% endif %}
+
+{% if page.mathjax %}
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+{% endif %}
+
+{% if site.google_scholar %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+{% endif %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% for css in site.extra_css %}
+<link rel="stylesheet" href="{{ css }}">
+{% endfor %}
+
+<script>
+  function closeNavMenu() {
+    var links = document.getElementById('myLinks');
+    var button = document.querySelector('.topnav .icon');
+    if (!links || !button) return;
+    links.classList.remove('open');
+    button.classList.remove('active');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', button.dataset.labelOpen);
+  }
+
+  function myFunction() {
+    var links = document.getElementById('myLinks');
+    var button = document.querySelector('.topnav .icon');
+    if (!links || !button) return;
+    var isOpen = links.classList.toggle('open');
+    button.classList.toggle('active', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
+    button.setAttribute('aria-label', isOpen ? button.dataset.labelClose : button.dataset.labelOpen);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.getElementById('myLinks');
+    if (links) {
+      links.querySelectorAll('a').forEach(function (anchor) {
+        anchor.addEventListener('click', closeNavMenu);
+      });
+    }
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeNavMenu();
+      }
+    });
+  });
+</script>

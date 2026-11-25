@@ -1,23 +1,27 @@
-{% capture person_url %}{{ site.canonical }}/{% endcapture %}
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% assign page_path = page.permalink | default: '/' %}
+{% capture person_url %}{{ site.canonical }}{{ page_path }}{% endcapture %}
 {% capture person_image %}{{ site.canonical }}/{{ site.avatar | remove: './' }}{% endcapture %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": {{ person_url | append: '#person' | jsonify }},
-  "name": {{ site.title | jsonify }},
+  "@id": {{ site.canonical | append: '/#person' | jsonify }},
+  "name": {{ strings.profile.name | default: site.title | jsonify }},
   "url": {{ person_url | jsonify }},
   "image": {{ person_image | jsonify }},
-  "jobTitle": {{ site.position | jsonify }},
+  "jobTitle": {{ strings.profile.position | default: site.position | jsonify }},
   "worksFor": {
     "@type": "Organization",
-    "name": {{ site.affiliation | jsonify }},
+    "name": {{ strings.profile.affiliation | default: site.affiliation | jsonify }},
     "url": {{ site.affiliation_link | jsonify }}
   },
   "sameAs": [
-    {{ site.github_link | jsonify }},
-    {{ site.linkedin | jsonify }},
-    {{ site.twitter | jsonify }}
+    {% assign has_same_as = false %}
+    {% if site.github_link %}{% assign has_same_as = true %}{{ site.github_link | jsonify }}{% endif %}
+    {% if site.linkedin %}{% if has_same_as %}, {% endif %}{% assign has_same_as = true %}{{ site.linkedin | jsonify }}{% endif %}
+    {% if site.twitter %}{% if has_same_as %}, {% endif %}{{ site.twitter | jsonify }}{% endif %}
   ]
 }
 </script>

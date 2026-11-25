@@ -9,8 +9,8 @@
   {% assign experience_url = '/experience/' %}
   {% assign honors_url = '/honors/' %}
 {% endif %}
-<a class="normal" href="https://blog.zhihangzhao.com" target="_blank" rel="noopener">{{ strings.navigation.blog }}</a>
+<a class="normal{% if page.translation_key == 'home' %} active{% endif %}" href="{{ home_url | relative_url }}"{% if page.translation_key == 'home' %} aria-current="page"{% endif %}>{{ strings.navigation.home }}</a>
+<a class="normal{% if page.translation_key == 'experience' %} active{% endif %}" href="{{ experience_url | relative_url }}"{% if page.translation_key == 'experience' %} aria-current="page"{% endif %}>{{ strings.navigation.experience }}</a>
+<a class="normal{% if page.translation_key == 'honors' %} active{% endif %}" href="{{ honors_url | relative_url }}"{% if page.translation_key == 'honors' %} aria-current="page"{% endif %}>{{ strings.navigation.honors }}</a>
 <a class="normal" href="{{ home_url | append: '#contact' | relative_url }}">{{ strings.navigation.contact }}</a>
-<a class="normal" href="{{ honors_url | relative_url }}">{{ strings.navigation.honors }}</a>
-<a class="normal" href="{{ experience_url | relative_url }}">{{ strings.navigation.experience }}</a>
-<a class="normal" href="{{ home_url | relative_url }}">{{ strings.navigation.home }}</a>
+<a class="normal" href="https://blog.zhihangzhao.com" target="_blank" rel="noopener noreferrer">{{ strings.navigation.blog }}</a>

@@ -1,4 +1,6 @@
-# Basic Information 
+# ------------------------------------------------------------------
+# Basic information
+# ------------------------------------------------------------------
 title: Zhihang Zhao
 lang: en
 position: Business Intelligence Specialist
@@ -6,34 +8,40 @@ affiliation: Insta360
 affiliation_link: https://www.insta360.com/
 email: zhihangzhao@insta360.com
 
+# ------------------------------------------------------------------
 # Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: zhihang zhao, zhao zhihang, zhaozhihang, zhihangzhao, zhihang
-description: Zhihang Zhao is a Data Analyst at Insta360, working on BI.
+# ------------------------------------------------------------------
+keywords: zhihang zhao, zhao zhihang, zhaozhihang, zhihangzhao, zhihang, business intelligence, data analyst, insta360
+description: Zhihang Zhao is a Business Intelligence Specialist and Data Analyst at Insta360, focusing on BI systems, analytics automation, and data-driven decision support.
 canonical: https://zhihangzhao.com
 
-# The option is used to show the last update time.
+# ------------------------------------------------------------------
+# Options
+# ------------------------------------------------------------------
 enable_last_update: false
+link_type: text             # text = labelled pills under name; icon = icons only
+enable_footnote: true
+footnote_link: https://github.com/yaoyao-liu/minimal-light
 
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
+# ------------------------------------------------------------------
+# Links
+# ------------------------------------------------------------------
 # google_scholar: https://scholar.google.com/
 cv_link: assets/files/cv-zhihangzhao.pdf
 github_link: https://github.com/zigzaghumor
 linkedin: https://www.linkedin.com/in/zhihangzhao/
 twitter: https://twitter.com/zigzaghumor
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.gif
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
+# ------------------------------------------------------------------
+# Images
+# ------------------------------------------------------------------
+avatar: assets/img/avatar.gif
+favicon: assets/img/favicon.png
+favicon_dark: assets/img/favicon-dark.png
 
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: true
-
-# The following files will be removed from the generated website.
+# ------------------------------------------------------------------
+# Files excluded from the generated website
+# ------------------------------------------------------------------
 exclude:
   - Gemfile
   - Gemfile.lock

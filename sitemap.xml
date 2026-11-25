@@ -1,70 +1,42 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
-
+{% for pair in site.data.translations %}
+{% assign key = pair[0] %}
+{% assign entry = pair[1] %}
+{% if key == 'home' %}
+  {% assign priority = '1.0' %}
+  {% assign changefreq = 'weekly' %}
+{% elsif key == 'experience' %}
+  {% assign priority = '0.8' %}
+  {% assign changefreq = 'monthly' %}
+{% else %}
+  {% assign priority = '0.7' %}
+  {% assign changefreq = 'monthly' %}
+{% endif %}
 <url>
-  <loc>https://zhihangzhao.com/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/" />
-  <priority>1.0</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>{{ site.canonical }}{{ entry.en }}</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="{{ site.canonical }}{{ entry.en }}" />
+  <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.canonical }}{{ entry['zh-CN'] }}" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.canonical }}{{ entry.en }}" />
+  <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  <changefreq>{{ changefreq }}</changefreq>
+  <priority>{{ priority }}</priority>
 </url>
 
 <url>
-  <loc>https://zhihangzhao.com/experience/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/experience/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/experience/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/experience/" />
-  <priority>0.8</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>monthly</changefreq>
+  <loc>{{ site.canonical }}{{ entry['zh-CN'] }}</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="{{ site.canonical }}{{ entry.en }}" />
+  <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ site.canonical }}{{ entry['zh-CN'] }}" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.canonical }}{{ entry.en }}" />
+  <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  <changefreq>{{ changefreq }}</changefreq>
+  <priority>{{ priority }}</priority>
 </url>
-
-<url>
-  <loc>https://zhihangzhao.com/honors/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/honors/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/honors/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/honors/" />
-  <priority>0.7</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
-<url>
-  <loc>https://zhihangzhao.com/zh/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/" />
-  <priority>1.0</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-
-<url>
-  <loc>https://zhihangzhao.com/zh/experience/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/experience/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/experience/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/experience/" />
-  <priority>0.8</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
-<url>
-  <loc>https://zhihangzhao.com/zh/honors/</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://zhihangzhao.com/honors/" />
-  <xhtml:link rel="alternate" hreflang="zh-CN" href="https://zhihangzhao.com/zh/honors/" />
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://zhihangzhao.com/honors/" />
-  <priority>0.7</priority>
-  <lastmod>2026-07-12</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
+{% endfor %}
 </urlset>

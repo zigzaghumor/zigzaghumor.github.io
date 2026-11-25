@@ -12,26 +12,38 @@ en:
     position: Business Intelligence Specialist
     affiliation: Insta360
     portrait_alt: Portrait of Zhihang Zhao
+  links:
+    email: Email
+    cv: CV
+    github: GitHub
+    linkedin: LinkedIn
+    twitter: X
   accessibility:
+    skip_to_content: Skip to main content
     primary_navigation: Primary navigation
+    home_link: Zhihang Zhao homepage
     open_menu: Open navigation menu
     close_menu: Close navigation menu
-    cv: Curriculum vitae
+    email: Send email to Zhihang Zhao
+    cv: Curriculum vitae (PDF)
     github: GitHub profile
     linkedin: LinkedIn profile
     twitter: X profile
   contact:
     title: Contact
-    intro: For collaboration, career opportunities, or professional exchange, reach me by email or LinkedIn.
+    intro: Open to project collaborations, career conversations, and professional exchanges. Feel free to reach out by email or LinkedIn.
     collaboration: Collaboration
-    collaboration_detail: Projects, analytics, and AI-enabled decision systems
+    collaboration_detail: Analytics projects, BI architecture, and AI-assisted decision workflows
+    collaboration_subject: Collaboration%20Inquiry
     career: Career Opportunities
-    career_detail: Roles, teams, and recruiting conversations
+    career_detail: Data, BI, and strategy roles or team conversations
+    career_subject: Career%20Opportunity
     connect: Professional Exchange
-    connect_detail: Ideas, experience, and industry perspectives
+    connect_detail: Industry perspectives, analytics practices, and ideas
   back_to_top: Back to Top
-  last_update: Last update
-  powered_by: Powered by Jekyll and
+  last_update: Last updated
+  powered_by_prefix: "Powered by Jekyll and "
+  powered_by_suffix: "."
 
 "zh-CN":
   navigation:
@@ -47,23 +59,35 @@ en:
     position: 商业智能专员
     affiliation: 影石 Insta360
     portrait_alt: Zhihang Zhao 的个人照片
+  links:
+    email: 邮箱
+    cv: 简历
+    github: GitHub
+    linkedin: LinkedIn
+    twitter: X
   accessibility:
+    skip_to_content: 跳至正文
     primary_navigation: 主导航
+    home_link: Zhihang Zhao 首页
     open_menu: 打开导航菜单
     close_menu: 关闭导航菜单
-    cv: 个人简历
+    email: 给 Zhihang Zhao 发送邮件
+    cv: 个人简历（PDF）
     github: GitHub 主页
     linkedin: LinkedIn 主页
     twitter: X 主页
   contact:
     title: 联系我
-    intro: 欢迎就项目合作、职业机会或专业交流与我联系。
+    intro: 欢迎通过邮件或 LinkedIn 就项目合作、职业机会与专业交流联系我。
     collaboration: 项目合作
-    collaboration_detail: 数据分析、商业智能与 AI 决策系统
+    collaboration_detail: 数据分析、BI 体系建设与 AI 决策工作流
+    collaboration_subject: "%E9%A1%B9%E7%9B%AE%E5%90%88%E4%BD%9C%E5%92%A8%E8%AF%A2"
     career: 职业机会
-    career_detail: 职位、团队与招聘交流
+    career_detail: 数据、商业智能相关岗位与团队交流
+    career_subject: "%E8%81%8C%E4%B8%9A%E6%9C%BA%E4%BC%9A%E6%B2%9F%E9%80%9A"
     connect: 专业交流
-    connect_detail: 行业实践、经验与想法
+    connect_detail: 行业观察、分析实践与经验探讨
   back_to_top: 返回顶部
   last_update: 最近更新
-  powered_by: 网站由 Jekyll 和以下主题驱动：
+  powered_by_prefix: "基于 Jekyll 与 "
+  powered_by_suffix: " 主题构建。"

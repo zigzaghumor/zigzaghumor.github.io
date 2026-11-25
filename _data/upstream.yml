@@ -1,6 +1,6 @@
 repository: yaoyao-liu/yaoyaoliu-homepage
 branch: main
-baseline: 2b53bb40d19e6cce1badaaa23a4fb54379d75c43
+baseline: 4388ce7e737fb57dde4848228ef826c7e22284f5
 paths:
   - _layouts
   - _sass

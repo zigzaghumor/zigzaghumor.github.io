@@ -1,109 +1,22 @@
 <!DOCTYPE html>
 {% assign page_lang = page.lang | default: site.lang | default: 'en' %}
-{% assign strings = site.data.i18n[page_lang] %}
 <html lang="{{ page_lang }}">
   <head>
-    {% include local/head-seo.html %}
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark | remove: './' | relative_url }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon | remove: './' | relative_url }}" type="image/png" />
-    <script src="{{ '/assets/js/favicon-switcher.js' | relative_url }}" type="application/javascript"></script>
-
-    {% include font-links.html %}
-    {% include person-jsonld.html %}
-
-    {% if page.mathjax %}
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        },
-        svg: {
-          fontCache: 'global'
-        }
-      };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    {% endif %}
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-    <script>
-      function myFunction() {
-        const links = document.getElementById('myLinks');
-        const button = document.querySelector('.topnav .icon');
-        const isOpen = links.classList.toggle('open');
-        button.classList.toggle('active', isOpen);
-        button.setAttribute('aria-expanded', String(isOpen));
-        button.setAttribute('aria-label', isOpen ? button.dataset.labelClose : button.dataset.labelOpen);
-      }
-    </script>
+    {% include head.html home=true %}
   </head>
   <body>
-    {% include local/navigation-shell.html %}
+    {% include topnav.html %}
 
-    <script src="{{ '/assets/js/vanilla-back-to-top.min.js' | relative_url }}"></script>
-    <script>addBackToTop({
-        backgroundColor: '#fff',
-        innerHTML: '{{ strings.back_to_top }}',
-        textColor: '#333'
-      })
-    </script>
-    <style>
-      #back-to-top {
-        border: 1px solid #ccc;
-        border-radius: 0;
-        font-size: 15px;
-        width: 100px;
-        text-align: center;
-        line-height: 30px;
-        height: 30px;
-      }
-    </style>
+    <div class="wrapper single-col">
+      {% include hero.html %}
+      <main id="main-content">
+        <section>
+          {{ content }}
 
-    <div class="wrapper">
-      <header>
-        {% include local/profile.html %}
-      </header>
-      <section>
-
-      {{ content }}
-
-      <br>
-
-      {% if site.enable_last_update %}
-      <small>Last Update:
-            <script>
-              const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-              var modiDate = new Date(document.lastModified);
-              var showAs = modiDate.getDate() + '. ' + monthNames[modiDate.getMonth()] + ' ' + modiDate.getFullYear();
-              document.write(showAs);
-            </script>
-      </small>
-      {% endif %}
-
-      {% if site.enable_footnote %}
-      <p><small>{{ strings.powered_by }} <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a>.</small></p>
-      {% endif %}
-
-      </section>
-      <footer>
-        <div style="font: 12px/1.2 var(--font-body)">
-        <p>
-        <small>
-        {% if site.imprint %}
-        <a href="{{ site.imprint }}" rel="noopener"><autocolor>Imprint / Impressum</autocolor></a><br>
-        {% endif %}
-        {% if site.data_protection %}
-        <a href="{{ site.data_protection }}" rel="noopener"><autocolor>Data Protection / Datenschutzhinweis</autocolor></a>
-        {% endif %}
-        </small>
-        </p>
-        </div>
-        <br>
-        <br>
-      </footer>
+          {% include page-end.html home=true %}
+        </section>
+      </main>
+      {% include footer.html %}
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
   </body>

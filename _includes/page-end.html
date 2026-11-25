@@ -1,0 +1,13 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[page_lang] %}
+{% if site.enable_last_update %}
+<p class="page-meta">
+  <small>{{ strings.last_update }}: <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: '%Y-%m-%d' }}</time></small>
+</p>
+{% endif %}
+
+{% if include.home and site.enable_footnote %}
+<p class="page-footnote">
+  <small>{{ strings.powered_by_prefix }}<a href="{{ site.footnote_link | default: 'https://github.com/yaoyao-liu/minimal-light' }}" target="_blank" rel="noopener noreferrer">Minimal Light</a>{{ strings.powered_by_suffix }}</small>
+</p>
+{% endif %}

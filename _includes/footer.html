@@ -1,0 +1,17 @@
+<footer>
+  {% if site.imprint or site.data_protection %}
+  <div class="site-footer-links">
+    <p>
+      <small>
+        {% if site.imprint %}
+        <a href="{{ site.imprint }}" target="_blank" rel="noopener noreferrer">Imprint / Impressum</a>
+        {% if site.data_protection %}<br>{% endif %}
+        {% endif %}
+        {% if site.data_protection %}
+        <a href="{{ site.data_protection }}" target="_blank" rel="noopener noreferrer">Data Protection / Datenschutzhinweis</a>
+        {% endif %}
+      </small>
+    </p>
+  </div>
+  {% endif %}
+</footer>

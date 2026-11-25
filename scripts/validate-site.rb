@@ -26,9 +26,11 @@ pages.each do |relative_path, (lang, canonical)|
   %w[en zh-CN x-default].each do |hreflang|
     errors << "#{relative_path}: missing hreflang #{hreflang}" unless html.include?(%(hreflang="#{hreflang}"))
   end
+  errors << "#{relative_path}: missing hero header" unless html.include?(%(<header class="hero">))
+  errors << "#{relative_path}: missing active navigation state" unless html.include?(%(aria-current="page"))
   errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("fa-language") && html.include?("hreflang=")
   errors << "#{relative_path}: language switch must remain visible before the collapsible links" unless html.match?(/language-link.*?<div id="myLinks">/m)
-  unless html.include?("family=Crimson+Pro") && html.include?("family=Source+Sans+3")
+  unless html.include?("family=Crimson+Pro") && html.include?("family=Source+Sans+3") && html.include?("family=IBM+Plex+Mono")
     errors << "#{relative_path}: upstream font stylesheets missing"
   end
 
@@ -49,8 +51,17 @@ end
   errors << "#{relative_path}: missing Contact section" unless html.include?(%(<div class="contact-panel" id="contact" role="region"))
 end
 
+not_found = File.join(SITE, "404.html")
+if File.file?(not_found)
+  html = File.read(not_found, encoding: "UTF-8")
+  errors << "404.html: missing noindex meta tag" unless html.include?(%(name="robots" content="noindex"))
+  errors << "404.html: missing error page content" unless html.include?(%(class="error-page"))
+else
+  errors << "missing generated page: 404.html"
+end
+
 if errors.empty?
-  puts "Validated six localized pages, Contact sections, canonical URLs, and hreflang links."
+  puts "Validated six localized pages, 404 page, hero headers, Contact sections, canonical URLs, and hreflang links."
 else
   warn errors.map { |error| "- #{error}" }.join("\n")
   exit 1

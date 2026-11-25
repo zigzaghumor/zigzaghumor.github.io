@@ -5,7 +5,7 @@ home:
   target: zh/index.md
   source_page: index.md
   target_page: zh/index.md
-  source_hash: 0c53b3cde0c615c4c143b1aba182e459bf35a2a00ab9f9605b91a7dd310166ac
+  source_hash: d5576cd2ec781ae21b482b25cdf125c9dc7de0f4766fdcd43fd214f57aec1dce
 
 experience:
   en: /experience/
@@ -14,7 +14,7 @@ experience:
   target: _includes/local/content/zh-CN/experience.md
   source_page: experience.md
   target_page: zh/experience.md
-  source_hash: 3bf7beebde1cfcd67a62d2a060721e841cc5daae52003f1e9ea15f0209920049
+  source_hash: 490390f09b2a7ddba19b61d3895a2265b91bc23d41fca4ef08d7fa8aafdd7d6b
 
 honors:
   en: /honors/
@@ -23,4 +23,4 @@ honors:
   target: _includes/local/content/zh-CN/honors.md
   source_page: honors.md
   target_page: zh/honors.md
-  source_hash: ea28c691237009dddab3f99a7fc30564d5df8b1523c7600ca1fd86034ab441aa
+  source_hash: a24a976a0541ed82dadc53e4c5d82c28a706f9d834c75b38b6f99f4e7b538376

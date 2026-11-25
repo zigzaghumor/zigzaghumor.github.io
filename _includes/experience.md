@@ -1,41 +1,42 @@
-# Experience
+<h2 class="page-title">Experience</h2>
 
 <div class="dated-heading">
-  <h2>Insta360</h2>
+  <h3>Insta360</h3>
   <time datetime="2024-07">Jul. 2024 – Present</time>
 </div>
 
-**Full-time, CEO Management Trainee**
+<p class="role-meta">Full-time · CEO Management Trainee</p>
 
-### Data Analyst, BI Team
+<h4 class="experience-role">Data Analyst, BI Team</h4>
 
-*Built BI systems and analytical frameworks to support decisions across marketing, product, and e-commerce.*
+<p class="role-summary">Built BI systems and analytical frameworks supporting marketing, product, and e-commerce decision-making.</p>
 
-- Built end-to-end BI dashboards and metric frameworks for paid media analysis, covering the full funnel from **impression to click, add-to-cart, and payment**, improving campaign monitoring, attribution, and review efficiency.
-- Designed and implemented a workforce analytics solution using **Python** and **Feishu OpenAPI**, automating data collection, cleaning, and budget-vs-actual labor analysis to improve resource planning accuracy.
-- Developed funnel analysis for cloud storage incentives, tracking **exposure, claim, retention, and payment** to identify conversion bottlenecks and support incentive strategy optimization.
-- Built the data infrastructure for a new drone business from **0 to 1**, covering serial-level logistics and activation tracking, revenue and attach-rate analysis, real-time sales monitoring, market exposure, and after-sales dashboards.
+- Built end-to-end BI dashboards and metric frameworks for paid media analytics across the full conversion funnel (**impression, click, add-to-cart, and payment**), improving campaign monitoring, attribution clarity, and post-campaign review efficiency.
+- Designed and implemented an automated workforce analytics pipeline using **Python** and **Feishu OpenAPI**, streamlining data ingestion, cleaning, and budget-vs-actual labor analysis to improve resource planning accuracy.
+- Developed conversion funnel analytics for cloud storage incentives, tracking **exposure, redemption, retention, and paid conversion** to pinpoint drop-off bottlenecks and guide incentive strategy optimization.
+- Established the **0-to-1** data infrastructure for a new drone business line, covering serial-level logistics and activation tracking, revenue and attach-rate analysis, real-time sales monitoring, market exposure, and after-sales dashboards.
 
-### Advertising & Growth Analytics, Ads Team
+<h4 class="experience-role">Advertising &amp; Growth Analytics, Ads Team</h4>
 
-*Supported paid media growth through attribution analysis, campaign optimization, and reporting automation.*
+<p class="role-summary">Supported paid media growth through attribution analysis, campaign optimization, and reporting automation.</p>
 
-- Built monitoring and attribution frameworks for **TikTok** campaigns across creatives, audience segments, and budget allocation, helping increase ROI from **6 to 10+** and drive **290% revenue growth**.
-- Partnered with product, operations, and engineering teams to build the advertising funnel for the cloud storage app from scratch, defining conversion paths, tracking logic, budget allocation, and reporting structure.
-- Led analytics support for **Black Friday** and **Christmas** campaigns by rebuilding the tracking framework and creating automated dashboards for daily monitoring, anomaly detection, and performance review.
-- Standardized weekly reporting workflows and automated creator ad naming conventions, improving attribution consistency and reducing manual effort by **80%**.
+- Built performance monitoring and attribution frameworks for **TikTok** campaigns across creatives, audience segments, and budget allocation, helping lift ROI from **6 to 10+** and drive **290% revenue growth**.
+- Partnered with product, operations, and engineering teams to launch the cloud storage app’s advertising funnel from scratch, defining conversion paths, tracking specifications, budget allocation, and reporting structures.
+- Led analytics support for peak **Black Friday** and **Christmas** campaigns by rebuilding the tracking framework and delivering automated dashboards for daily monitoring, anomaly detection, and post-campaign reviews.
+- Standardized weekly reporting workflows and automated creator ad naming conventions, strengthening attribution consistency while reducing manual effort by **80%**.
 
 <div class="dated-heading">
-  <h2>Beijing Xiaomi Technology Co., Ltd</h2>
+  <h3>Beijing Xiaomi Technology Co., Ltd.</h3>
   <time datetime="2022-02">Feb. 2022 – Apr. 2022</time>
 </div>
 
-  **Internship**, Investor Relations Specialist  
-  *Assisted in daily operations of Xiaomi’s Investor Relations Department.*
+<p class="role-meta">Internship · Investor Relations Specialist</p>
 
-- Assisted in producing a detailed comparative company research report on Transsion, where I analyzed complex issues related to the company’s financial performance and industry competition using data analysis.
-- Developed comprehensive report and presentation materials focusing on the electric vehicle industry, encompassing an in-depth analysis of the primary product development cycles of leading companies in the electric vehicle sector.
-- Tracked analyst expectations, quarterly performance, and operational status of various comparable companies. Contributed to the production of Xiaomi’s quarterly reports.
+<p class="role-summary">Supported daily operations, peer research, and quarterly reporting for Xiaomi’s Investor Relations team.</p>
+
+- Contributed to an in-depth comparative research report on Transsion, analyzing financial performance and competitive positioning through quantitative benchmarking.
+- Prepared research reports and presentation materials on the electric vehicle sector, examining primary product development cycles across leading automakers.
+- Tracked analyst consensus estimates, quarterly performance, and operating metrics across comparable companies to support the preparation of Xiaomi’s quarterly reports.
 
 <!-- ## CUFE Course Thesis Template <span style="float:right">Jul. 2021</span>
   **$\LaTeX$**, Personal Project  
