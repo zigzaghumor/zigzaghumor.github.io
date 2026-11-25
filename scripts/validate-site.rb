@@ -28,15 +28,21 @@ pages.each do |relative_path, (lang, canonical)|
   end
   errors << "#{relative_path}: missing hero header" unless html.include?(%(<header class="hero">))
   errors << "#{relative_path}: missing active navigation state" unless html.include?(%(aria-current="page"))
-  errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("fa-language") && html.include?("hreflang=")
+  errors << "#{relative_path}: missing accessible language switch" unless html.include?("language-link") && html.include?("fa-language") && html.include?("hreflang=") && html.include?("lang-pair")
   errors << "#{relative_path}: language switch must remain visible before the collapsible links" unless html.match?(/language-link.*?<div id="myLinks">/m)
   unless html.include?("family=Crimson+Pro") && html.include?("family=Source+Sans+3") && html.include?("family=IBM+Plex+Mono")
     errors << "#{relative_path}: upstream font stylesheets missing"
   end
 
   if lang == "zh-CN"
-    unless html.include?("family=Noto+Sans+SC") && html.include?("family=Noto+Serif+SC")
-      errors << "#{relative_path}: Chinese fallback font stylesheets missing"
+    unless html.include?("family=Noto+Sans+SC")
+      errors << "#{relative_path}: Chinese Noto Sans SC font stylesheet missing"
+    end
+    if html.include?("family=Noto+Serif+SC")
+      errors << "#{relative_path}: unused Noto Serif SC stylesheet should not load on Chinese pages"
+    end
+    unless html.include?("商业智能")
+      errors << "#{relative_path}: missing localized Chinese metadata"
     end
   elsif html.include?("family=Noto+Sans+SC") || html.include?("family=Noto+Serif+SC")
     errors << "#{relative_path}: Chinese fallback fonts should load only on Chinese pages"

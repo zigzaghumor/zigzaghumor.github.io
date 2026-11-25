@@ -7,4 +7,4 @@ permalink: /experience/
 description: Professional experience and selected BI, analytics, and growth projects by Zhihang Zhao.
 ---
 
-{% include_relative _includes/experience.md %}
+{% include local/experience-content.html %}

@@ -1,0 +1,116 @@
+about:
+  heading: About Me
+  paragraphs:
+    - "I am a Business Intelligence Specialist and Data Analyst at [Insta360](https://www.insta360.com/), where I build BI systems and deliver actionable insights that drive business growth."
+    - "My work spans data analytics, workflow automation, and decision support—turning complex operational data into clear metrics, reliable pipelines, and practical decisions across marketing, product, and e-commerce."
+
+skills:
+  heading: Skills
+  separator: ", "
+  colon: ": "
+  groups:
+    - label: Data Analysis & Visualization
+      items:
+        - text: SQL
+        - text: Python
+          icon: fab fa-python
+        - text: Tableau
+        - text: Excel
+    - label: Data Platforms & Cloud Services
+      items:
+        - text: Alibaba Cloud DataWorks
+        - text: AWS
+          icon: fab fa-aws
+    - label: AI & Agentic Workflows
+      items:
+        - text: Claude Code
+        - text: OpenAI Codex
+        - text: Agentic Workflows
+    - label: Research & Development Tools
+      items:
+        - text: Stata
+        - text: R
+          icon: fab fa-r-project
+        - text: Git
+          icon: fab fa-git-alt
+        - text: Linux
+          icon: fab fa-linux
+        - text: Markdown
+          icon: fab fa-markdown
+        - text: LaTeX
+    - label: Languages
+      items:
+        - text: Chinese (Native)
+        - text: English (Fluent)
+
+education:
+  heading: Education
+  entries:
+    - school: The University of Warwick
+      location: Coventry, UK
+      datetime: "2022-09"
+      period: "Sep. 2022 – Sep. 2023"
+      degree: MSc in Economics and International Financial Economics
+      details:
+        - label: Selected Coursework
+          text: "Advanced Macroeconomics, Advanced Microeconomics, Advanced Econometrics, Topics in Global Finance, The Economics of Financial Markets, Game Theory"
+    - school: Central University of Finance and Economics
+      location: Beijing, China
+      datetime: "2018-09"
+      period: "Sep. 2018 – Jul. 2022"
+      degree: Bachelor of Economics in National Economic Management
+      details:
+        - label: Selected Coursework
+          text: "Python Programming (83), Econometrics (89), Mathematical Economics (98), Intermediate Macroeconomics (93), Intermediate Microeconomics (86), Real Analysis (94)"
+        - label: Scholarships
+          text: "National Encouragement Scholarship, Academic Research and Innovation Excellence Scholarship"
+
+experience:
+  heading: Experience
+  companies:
+    - name: Insta360
+      datetime: "2024-07"
+      period: "Jul. 2024 – Present"
+      meta: "Full-time · CEO Management Trainee"
+      roles:
+        - title: Data Analyst, BI Team
+          summary: "Built BI systems and analytical frameworks supporting marketing, product, and e-commerce decision-making."
+          bullets:
+            - "Built end-to-end BI dashboards and metric frameworks for paid media analytics across the full conversion funnel (**impression, click, add-to-cart, and payment**), improving campaign monitoring, attribution clarity, and post-campaign review efficiency."
+            - "Designed and implemented an automated workforce analytics pipeline using **Python** and **Feishu OpenAPI**, streamlining data ingestion, cleaning, and budget-vs-actual labor analysis to improve resource planning accuracy."
+            - "Developed conversion funnel analytics for cloud storage incentives, tracking **exposure, redemption, retention, and paid conversion** to pinpoint drop-off bottlenecks and guide incentive strategy optimization."
+            - "Established the **0-to-1** data infrastructure for a new drone business line, covering serial-level logistics and activation tracking, revenue and attach-rate analysis, real-time sales monitoring, market exposure, and after-sales dashboards."
+        - title: Advertising & Growth Analytics, Ads Team
+          summary: "Supported paid media growth through attribution analysis, campaign optimization, and reporting automation."
+          bullets:
+            - "Built performance monitoring and attribution frameworks for **TikTok** campaigns across creatives, audience segments, and budget allocation, helping lift ROI from **6 to 10+** and drive **290% revenue growth**."
+            - "Partnered with product, operations, and engineering teams to launch the cloud storage app’s advertising funnel from scratch, defining conversion paths, tracking specifications, budget allocation, and reporting structures."
+            - "Led analytics support for peak **Black Friday** and **Christmas** campaigns by rebuilding the tracking framework and delivering automated dashboards for daily monitoring, anomaly detection, and post-campaign reviews."
+            - "Standardized weekly reporting workflows and automated creator ad naming conventions, strengthening attribution consistency while reducing manual effort by **80%**."
+    - name: Beijing Xiaomi Technology Co., Ltd.
+      datetime: "2022-02"
+      period: "Feb. 2022 – Apr. 2022"
+      meta: "Internship · Investor Relations Specialist"
+      roles:
+        - summary: "Supported daily operations, peer research, and quarterly reporting for Xiaomi’s Investor Relations team."
+          bullets:
+            - "Contributed to an in-depth comparative research report on Transsion, analyzing financial performance and competitive positioning through quantitative benchmarking."
+            - "Prepared research reports and presentation materials on the electric vehicle sector, examining primary product development cycles across leading automakers."
+            - "Tracked analyst consensus estimates, quarterly performance, and operating metrics across comparable companies to support the preparation of Xiaomi’s quarterly reports."
+
+honors:
+  heading: Honors and Awards
+  divider: " — "
+  items:
+    - datetime: "2020-11"
+      date: "Nov. 2020"
+      title: "2020 Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM), Beijing"
+      award: First Prize
+    - datetime: "2019-12"
+      date: "Dec. 2019"
+      title: "The 30th Beijing College Student Mathematics Competition (Economics Division)"
+      award: Second Prize
+    - datetime: "2019-11"
+      date: "Nov. 2019"
+      title: "The 11th National College Student Mathematics Competition (Non-Mathematics Division)"
+      award: Second Prize

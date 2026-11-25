@@ -7,4 +7,4 @@ permalink: /honors/
 description: Academic honors and mathematics competition awards received by Zhihang Zhao.
 ---
 
-{% include_relative _includes/honors.md %}
+{% include local/honors-content.html %}

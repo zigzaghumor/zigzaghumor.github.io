@@ -1,0 +1,116 @@
+about:
+  heading: 关于我
+  paragraphs:
+    - "现就职于[影石 Insta360](https://www.insta360.com/)，担任商业智能专员与数据分析师，专注 BI 体系建设与业务增长洞察。"
+    - "工作涵盖数据分析、流程自动化与经营决策支持，服务市场、产品与电商等核心场景，致力于将复杂业务数据沉淀为清晰指标、稳定链路与可落地行动。"
+
+skills:
+  heading: 专业技能
+  separator: "、"
+  colon: "："
+  groups:
+    - label: 数据分析与可视化
+      items:
+        - text: SQL
+        - text: Python
+          icon: fab fa-python
+        - text: Tableau
+        - text: Excel
+    - label: 数据平台与云服务
+      items:
+        - text: 阿里云 DataWorks
+        - text: AWS
+          icon: fab fa-aws
+    - label: AI 与智能体工作流
+      items:
+        - text: Claude Code
+        - text: OpenAI Codex
+        - text: 智能体工作流编排
+    - label: 研究与开发工具
+      items:
+        - text: Stata
+        - text: R
+          icon: fab fa-r-project
+        - text: Git
+          icon: fab fa-git-alt
+        - text: Linux
+          icon: fab fa-linux
+        - text: Markdown
+          icon: fab fa-markdown
+        - text: LaTeX
+    - label: 语言能力
+      items:
+        - text: 中文（母语）
+        - text: 英语（流利）
+
+education:
+  heading: 教育经历
+  entries:
+    - school: 华威大学
+      location: 英国考文垂
+      datetime: "2022-09"
+      period: "2022.09 – 2023.09"
+      degree: 理学硕士 · 经济学与国际金融经济学
+      details:
+        - label: 核心课程
+          text: "高级宏观经济学、高级微观经济学、高级计量经济学、全球金融专题、金融市场经济学、博弈论"
+    - school: 中央财经大学
+      location: 中国北京
+      datetime: "2018-09"
+      period: "2018.09 – 2022.07"
+      degree: 经济学学士 · 国民经济管理
+      details:
+        - label: 核心课程
+          text: "Python 程序设计（83）、计量经济学（89）、数理经济学（98）、中级宏观经济学（93）、中级微观经济学（86）、实分析（94）"
+        - label: 奖学金
+          text: "国家励志奖学金、学术科研与创新优秀奖学金"
+
+experience:
+  heading: 工作经历
+  companies:
+    - name: 影石 Insta360
+      datetime: "2024-07"
+      period: "2024.07 – 至今"
+      meta: "全职 · 总裁管理培训生"
+      roles:
+        - title: 数据分析师 · BI 团队
+          summary: "建设 BI 系统与分析框架，支撑市场、产品与电商业务的日常监测与经营决策。"
+          bullets:
+            - "搭建付费媒体全链路 BI 看板与指标体系，贯通**曝光、点击、加购至支付**转化漏斗，提升投放监测、归因分析与复盘效率。"
+            - "基于 **Python** 与**飞书开放平台 API** 落地自动化人力分析链路，打通数据采集、清洗与预算/实际工时核算，提升资源规划精准度。"
+            - "构建云存储激励活动转化漏斗，追踪**曝光、领取、留存与付费转化**，定位核心流失节点并反哺激励策略迭代。"
+            - "从 **0 到 1** 搭建无人机新业务数据底座，覆盖序列号级物流与激活追踪、收入与连带率分析、实时销售监控、市场曝光及售后看板。"
+        - title: 广告与增长分析 · 广告团队
+          summary: "聚焦付费媒体增长，通过归因分析、投放策略优化与报表自动化提升投放回报。"
+          bullets:
+            - "建立覆盖素材表现、受众分层与预算分配的 **TikTok** 广告监控与归因体系，助力 ROI 从 **6 提升至 10+**，带动收入增长 **290%**。"
+            - "协同产品、运营与研发团队，从零构建云存储应用广告投放漏斗，落地转化路径定义、追踪规范、预算分配机制与报表架构。"
+            - "主导**黑色星期五**与**圣诞节**大促分析支持，重构追踪体系并上线自动化看板，保障每日监测、异常预警与大促复盘。"
+            - "规范周报产出流程并实现达人广告命名自动化，统一归因口径，将人工报表工作量降低 **80%**。"
+    - name: 北京小米科技有限责任公司
+      datetime: "2022-02"
+      period: "2022.02 – 2022.04"
+      meta: "实习 · 投资者关系专员"
+      roles:
+        - summary: "支持小米投资者关系团队开展日常运营、同业对标研究与季度报告编制。"
+          bullets:
+            - "参与撰写传音控股深度对标研究报告，通过定量分析拆解其财务表现与行业竞争格局。"
+            - "编制电动汽车行业研究报告与路演演示材料，系统梳理头部车企核心产品研发周期。"
+            - "持续跟踪可比公司的分析师一致预期、季度业绩与经营动态，协助完成小米季度报告撰写。"
+
+honors:
+  heading: 荣誉奖项
+  divider: " · "
+  items:
+    - datetime: "2020-11"
+      date: "2020.11"
+      title: "2020 年全国大学生数学建模竞赛（北京赛区）"
+      award: 一等奖
+    - datetime: "2019-12"
+      date: "2019.12"
+      title: "第 30 届北京市大学生数学竞赛（经济类）"
+      award: 二等奖
+    - datetime: "2019-11"
+      date: "2019.11"
+      title: "第 11 届全国大学生数学竞赛（非数学类）"
+      award: 二等奖

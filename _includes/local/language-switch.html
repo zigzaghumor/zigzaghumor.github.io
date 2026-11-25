@@ -8,7 +8,11 @@
   {% assign switch_lang = 'zh-CN' %}
   {% assign switch_url = translations['zh-CN'] | default: '/zh/' %}
 {% endif %}
-<a class="normal language-link" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}" hreflang="{{ switch_lang }}" rel="alternate" aria-label="{{ strings.navigation.switch_aria }}">
+<a class="normal language-link" href="{{ switch_url | relative_url }}" lang="{{ switch_lang }}" hreflang="{{ switch_lang }}" rel="alternate" aria-label="{{ strings.navigation.switch_aria }}" data-switch-lang="{{ switch_lang }}">
   <i class="fa-solid fa-language" aria-hidden="true"></i>
-  <span>{{ strings.navigation.switch_label }}</span>
+  <span class="lang-pair">
+    <span class="lang-current" aria-hidden="true">{{ strings.navigation.current_short }}</span>
+    <span class="lang-sep" aria-hidden="true">/</span>
+    <span class="lang-target">{{ strings.navigation.switch_short }}</span>
+  </span>
 </a>

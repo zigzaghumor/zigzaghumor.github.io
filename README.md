@@ -17,9 +17,9 @@ Preview the site at <http://localhost:4000>. Generated static files are written 
 
 ### Bilingual Content
 
-English pages are served at the root URLs (`/`, `/experience/`, `/honors/`), and Chinese pages live under `/zh/`. Shared UI strings live in `_data/i18n.yml`, while `_data/translations.yml` tracks page pairs and source hashes.
+English pages are served at `/`, `/experience/`, `/honors/`, and Chinese pages live under `/zh/`. All page copy is structured in `_data/content_en.yml` and `_data/content_zh.yml` and rendered through shared templates in `_includes/local/` to guarantee structural parity. Shared UI strings live in `_data/i18n.yml`, and `_data/translations.yml` tracks page pairs and source hashes.
 
-After editing English content, update the paired Chinese content and refresh the recorded hashes:
+After editing English content in `_data/content_en.yml`, update `_data/content_zh.yml` and refresh the recorded hashes:
 
 ```bash
 ruby scripts/check-translations.rb --update

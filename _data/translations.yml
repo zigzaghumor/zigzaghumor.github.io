@@ -1,26 +1,26 @@
 home:
   en: /
   zh-CN: /zh/
-  source: index.md
-  target: zh/index.md
+  source: _data/content_en.yml
+  target: _data/content_zh.yml
   source_page: index.md
   target_page: zh/index.md
-  source_hash: d5576cd2ec781ae21b482b25cdf125c9dc7de0f4766fdcd43fd214f57aec1dce
+  source_hash: 282bc4c376e05077e9d730bd3e8f6b35acd44aadc6ba9608baf803df4207f9d8
 
 experience:
   en: /experience/
   zh-CN: /zh/experience/
-  source: _includes/experience.md
-  target: _includes/local/content/zh-CN/experience.md
+  source: _data/content_en.yml
+  target: _data/content_zh.yml
   source_page: experience.md
   target_page: zh/experience.md
-  source_hash: 490390f09b2a7ddba19b61d3895a2265b91bc23d41fca4ef08d7fa8aafdd7d6b
+  source_hash: 282bc4c376e05077e9d730bd3e8f6b35acd44aadc6ba9608baf803df4207f9d8
 
 honors:
   en: /honors/
   zh-CN: /zh/honors/
-  source: _includes/honors.md
-  target: _includes/local/content/zh-CN/honors.md
+  source: _data/content_en.yml
+  target: _data/content_zh.yml
   source_page: honors.md
   target_page: zh/honors.md
-  source_hash: a24a976a0541ed82dadc53e4c5d82c28a706f9d834c75b38b6f99f4e7b538376
+  source_hash: 282bc4c376e05077e9d730bd3e8f6b35acd44aadc6ba9608baf803df4207f9d8

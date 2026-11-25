@@ -12,6 +12,7 @@
 {% assign page_path = page.permalink | default: page.url | default: '/' %}
 {% assign page_url = site.canonical | append: page_path %}
 {% assign meta_description = page.description | default: site.description %}
+{% assign meta_keywords = strings.seo.keywords | default: site.keywords %}
 {% if page_lang == 'zh-CN' %}
   {% assign og_locale = 'zh_CN' %}
   {% assign alternate_locale = 'en_US' %}
@@ -23,7 +24,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="{{ meta_description | strip | escape }}">
-{% if site.keywords %}<meta name="keywords" content="{{ site.keywords | escape }}">{% endif %}
+{% if meta_keywords %}<meta name="keywords" content="{{ meta_keywords | escape }}">{% endif %}
 {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ document_title | strip | escape }}">

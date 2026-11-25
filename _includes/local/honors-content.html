@@ -1,0 +1,17 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% if page_lang == 'zh-CN' %}
+  {% assign copy = site.data.content_zh.honors %}
+{% else %}
+  {% assign copy = site.data.content_en.honors %}
+{% endif %}
+
+<h2 class="page-title">{{ copy.heading }}</h2>
+
+<ul class="dated-list honors-dated-list">
+  {% for item in copy.items %}
+  <li>
+    <strong><time datetime="{{ item.datetime }}">{{ item.date }}</time></strong>
+    <span>{{ item.title }}{{ copy.divider }}<span class="honors-award">{{ item.award }}</span></span>
+  </li>
+  {% endfor %}
+</ul>

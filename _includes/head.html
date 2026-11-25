@@ -61,6 +61,14 @@
         anchor.addEventListener('click', closeNavMenu);
       });
     }
+    var switcher = document.querySelector('.topnav .language-link');
+    if (switcher && switcher.dataset.switchLang) {
+      switcher.addEventListener('click', function () {
+        try {
+          window.localStorage.setItem('site_lang', switcher.dataset.switchLang);
+        } catch (e) {}
+      });
+    }
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') {
         closeNavMenu();

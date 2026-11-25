@@ -15,6 +15,37 @@ def front_matter(path)
   YAML.safe_load(match[1]) || {}
 end
 
+def check_parity(en_data, zh_data, errors)
+  if en_data.dig("skills", "groups")&.length != zh_data.dig("skills", "groups")&.length
+    errors << "content parity: skills.groups count mismatch between en and zh"
+  end
+  if en_data.dig("education", "entries")&.length != zh_data.dig("education", "entries")&.length
+    errors << "content parity: education.entries count mismatch between en and zh"
+  end
+  en_companies = en_data.dig("experience", "companies") || []
+  zh_companies = zh_data.dig("experience", "companies") || []
+  if en_companies.length != zh_companies.length
+    errors << "content parity: experience.companies count mismatch between en and zh"
+  else
+    en_companies.zip(zh_companies).each_with_index do |(ec, zc), idx|
+      er = ec["roles"] || []
+      zr = zc["roles"] || []
+      if er.length != zr.length
+        errors << "content parity: experience.companies[#{idx}].roles count mismatch"
+        next
+      end
+      er.zip(zr).each_with_index do |(r1, r2), ridx|
+        if (r1["bullets"] || []).length != (r2["bullets"] || []).length
+          errors << "content parity: experience.companies[#{idx}].roles[#{ridx}].bullets count mismatch"
+        end
+      end
+    end
+  end
+  if en_data.dig("honors", "items")&.length != zh_data.dig("honors", "items")&.length
+    errors << "content parity: honors.items count mismatch between en and zh"
+  end
+end
+
 translations = YAML.safe_load(File.read(DATA_PATH, encoding: "UTF-8"))
 errors = []
 
@@ -47,11 +78,19 @@ translations.each do |key, entry|
   errors << "#{key}: Chinese permalink mismatch" unless target_meta["permalink"] == entry["zh-CN"]
 end
 
+en_content_path = File.join(ROOT, "_data", "content_en.yml")
+zh_content_path = File.join(ROOT, "_data", "content_zh.yml")
+if File.file?(en_content_path) && File.file?(zh_content_path)
+  en_data = YAML.safe_load(File.read(en_content_path, encoding: "UTF-8"))
+  zh_data = YAML.safe_load(File.read(zh_content_path, encoding: "UTF-8"))
+  check_parity(en_data, zh_data, errors)
+end
+
 if UPDATE && errors.empty?
   File.write(DATA_PATH, YAML.dump(translations), encoding: "UTF-8")
   puts "Updated translation source hashes."
 elsif errors.empty?
-  puts "Translation mappings and source hashes are current."
+  puts "Translation mappings, structural parity, and source hashes are current."
 else
   warn errors.map { |error| "- #{error}" }.join("\n")
   exit 1

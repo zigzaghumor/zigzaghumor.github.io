@@ -7,4 +7,4 @@ permalink: /zh/honors/
 description: Zhihang Zhao 获得的学术荣誉与数学竞赛奖项。
 ---
 
-{% include local/content/zh-CN/honors.md %}
+{% include local/honors-content.html %}

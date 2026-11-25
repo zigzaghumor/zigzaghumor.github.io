@@ -6,17 +6,50 @@
 }
 
 :lang(zh-CN) {
-  --font-serif: "Crimson Pro", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "Noto Serif CJK SC", STSong, SimSun, serif;
-  --font-sans: "Source Sans 3", "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-sans: "Source Sans 3", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-serif: var(--font-sans);
 }
 
 body {
   font-family: var(--font-serif);
 }
 
+:lang(zh-CN) body {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  color: #2f343d;
+}
+
+:lang(zh-CN) h1,
+:lang(zh-CN) h2,
+:lang(zh-CN) h3,
+:lang(zh-CN) h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+:lang(zh-CN) h2 {
+  font-size: 1.32rem;
+}
+
+:lang(zh-CN) .dated-heading h3 {
+  font-size: 1.12rem;
+}
+
+:lang(zh-CN) .experience-role {
+  font-size: 1.02rem;
+}
+
 :lang(zh-CN) section p,
 :lang(zh-CN) section li {
-  line-height: 1.82;
+  line-height: 1.86;
+}
+
+:lang(zh-CN) strong {
+  font-weight: 600;
 }
 
 :lang(zh-CN) em {
@@ -114,13 +147,13 @@ body {
 .topnav > .topnav-inner > a.language-link {
   order: 3;
   margin-left: 8px;
-  padding: 5px 11px;
+  padding: 4px 11px;
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.3;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.06);
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.07);
   transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
@@ -130,8 +163,34 @@ body {
 
 .topnav > .topnav-inner > a.language-link:hover,
 .topnav > .topnav-inner > a.language-link:focus-visible {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.48);
+  color: #fff;
+}
+
+.lang-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-current {
+  color: #fff;
+  font-weight: 600;
+}
+
+.lang-sep {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.lang-target {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 400;
+  transition: color 0.15s ease;
+}
+
+.topnav > .topnav-inner > a.language-link:hover .lang-target,
+.topnav > .topnav-inner > a.language-link:focus-visible .lang-target {
   color: #fff;
 }
 
@@ -157,8 +216,8 @@ body {
   .topnav > .topnav-inner > a.language-link {
     order: 2;
     margin-left: 0;
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 4px 10px;
+    font-size: 13.5px;
   }
 
   .topnav .icon {
@@ -213,10 +272,19 @@ body {
   font-family: var(--font-sans);
 }
 
+:lang(zh-CN) .hero h1 {
+  font-size: 1.95rem;
+}
+
 :lang(zh-CN) .hero .hero-position {
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: none;
   font-size: 0.92rem;
+  font-weight: 600;
+}
+
+:lang(zh-CN) .hero .hero-affil {
+  font-size: 0.96rem;
 }
 
 .hero-pill {
@@ -286,6 +354,35 @@ section ul li i {
   white-space: nowrap;
 }
 
+/* ─── Education layout ─── */
+.edu-heading {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 8px;
+}
+
+.edu-loc {
+  color: #6b7280;
+  font-size: 0.92em;
+}
+
+.edu-loc::before {
+  content: '·';
+  margin-right: 8px;
+  color: #9ca3af;
+}
+
+.edu-degree {
+  font-style: italic;
+}
+
+:lang(zh-CN) .edu-degree {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--navy);
+}
+
 /* ─── Dated headings & rows (Education / Experience) ─── */
 .dated-heading {
   display: grid;
@@ -310,6 +407,7 @@ section ul li i {
 .dated-heading time,
 .dated-row time {
   font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.82rem;
   font-weight: 500;
   color: rgba(19, 41, 75, 0.65);
@@ -318,9 +416,8 @@ section ul li i {
 
 :lang(zh-CN) .dated-heading time,
 :lang(zh-CN) .dated-row time {
-  font-family: var(--font-sans);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
+  font-family: "IBM Plex Mono", var(--font-sans);
+  font-size: 0.84rem;
 }
 
 .dated-row {
@@ -358,7 +455,7 @@ section ul li i {
 
 :lang(zh-CN) .role-summary {
   font-style: normal;
-  color: #525866;
+  color: #555e6d;
 }
 
 @media print, screen and (max-width: 540px) {
@@ -380,7 +477,7 @@ section ul li i {
 }
 
 :lang(zh-CN) .dated-list.honors-dated-list {
-  --label-w: 6.4rem;
+  --label-w: 4.5rem;
 }
 
 .dated-list.honors-dated-list li {
@@ -391,12 +488,7 @@ section ul li i {
 
 .dated-list.honors-dated-list li > strong:first-child {
   font-family: var(--font-mono);
-}
-
-:lang(zh-CN) .dated-list.honors-dated-list li > strong:first-child {
-  font-family: var(--font-sans);
-  font-size: 0.84em;
-  font-weight: 500;
+  font-variant-numeric: tabular-nums;
 }
 
 .honors-award {
@@ -477,7 +569,7 @@ section ul li i {
 .contact-action-desc {
   color: #555;
   font-size: 0.9rem;
-  line-height: 1.48;
+  line-height: 1.5;
 }
 
 .contact-action:hover,
@@ -569,6 +661,11 @@ section ul li i {
   margin: 0 0 10px;
 }
 
+.error-page .error-lead-secondary {
+  font-size: 0.94rem;
+  color: #7b8494;
+}
+
 .error-actions {
   display: flex;
   flex-wrap: wrap;
@@ -577,7 +674,7 @@ section ul li i {
   margin-top: 28px;
 }
 
-/* ─── Back to top button (aligned with upstream refresh) ─── */
+/* ─── Back to top button ─── */
 #back-to-top {
   border: none;
   border-radius: 4px;
@@ -598,7 +695,7 @@ section ul li i {
   box-shadow: 0 4px 12px rgba(19, 41, 75, 0.35);
 }
 
-/* ─── Dark mode support (preserving full local dark theme on upstream v2 shell) ─── */
+/* ─── Dark mode support ─── */
 @media (prefers-color-scheme: dark) {
   :root {
     --navy: #7cc4fa;
@@ -612,7 +709,8 @@ section ul li i {
     background: #14161e;
   }
 
-  body {
+  body,
+  :lang(zh-CN) body {
     background-color: #1c1f2b;
     color: #d8dce6;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
@@ -657,8 +755,14 @@ section ul li i {
   .hero .hero-affil,
   .role-summary,
   :lang(zh-CN) .role-summary,
+  .edu-loc,
   .error-page .error-lead {
     color: #b4bccb;
+  }
+
+  .edu-loc::before,
+  .error-page .error-lead-secondary {
+    color: #7d8799;
   }
 
   .hero .hero-affil a:hover {

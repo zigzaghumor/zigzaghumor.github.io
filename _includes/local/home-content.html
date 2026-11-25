@@ -1,0 +1,36 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% if page_lang == 'zh-CN' %}
+  {% assign copy = site.data.content_zh %}
+{% else %}
+  {% assign copy = site.data.content_en %}
+{% endif %}
+
+<h2>{{ copy.about.heading }}</h2>
+{% for paragraph in copy.about.paragraphs %}
+{{ paragraph | markdownify }}
+{% endfor %}
+
+<h2>{{ copy.skills.heading }}</h2>
+<ul class="skills-list">
+  {% for group in copy.skills.groups %}
+  <li>
+    <strong>{{ group.label }}{{ copy.skills.colon }}</strong>{% for item in group.items %}{% if forloop.index > 1 %}{{ copy.skills.separator }}{% endif %}{% if item.icon %}<span class="nowrap"><i class="{{ item.icon }}" aria-hidden="true"></i> {{ item.text }}</span>{% else %}{{ item.text }}{% endif %}{% endfor %}
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>{{ copy.education.heading }}</h2>
+{% for edu in copy.education.entries %}
+<div class="dated-row">
+  <span class="edu-heading"><strong>{{ edu.school }}</strong><span class="edu-loc">{{ edu.location }}</span></span>
+  <time datetime="{{ edu.datetime }}">{{ edu.period }}</time>
+</div>
+<ul class="edu-details">
+  <li class="edu-degree">{{ edu.degree }}</li>
+  {% for detail in edu.details %}
+  <li><strong>{{ detail.label }}{{ copy.skills.colon }}</strong>{{ detail.text }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+{% include local/contact.html %}

@@ -1,0 +1,30 @@
+{% assign page_lang = page.lang | default: site.lang | default: 'en' %}
+{% if page_lang == 'zh-CN' %}
+  {% assign copy = site.data.content_zh.experience %}
+{% else %}
+  {% assign copy = site.data.content_en.experience %}
+{% endif %}
+
+<h2 class="page-title">{{ copy.heading }}</h2>
+
+{% for company in copy.companies %}
+<div class="dated-heading">
+  <h3>{{ company.name }}</h3>
+  <time datetime="{{ company.datetime }}">{{ company.period }}</time>
+</div>
+<p class="role-meta">{{ company.meta }}</p>
+
+{% for role in company.roles %}
+{% if role.title %}
+<h4 class="experience-role">{{ role.title }}</h4>
+{% endif %}
+{% if role.summary %}
+<p class="role-summary">{{ role.summary }}</p>
+{% endif %}
+<ul>
+  {% for bullet in role.bullets %}
+  <li>{{ bullet | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% endfor %}

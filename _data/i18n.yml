@@ -1,4 +1,6 @@
 en:
+  seo:
+    keywords: zhihang zhao, zhao zhihang, zhaozhihang, zhihangzhao, business intelligence, data analyst, insta360
   navigation:
     home: Home
     experience: Experience
@@ -6,6 +8,8 @@ en:
     contact: Contact
     blog: Blog
     switch_label: 中文
+    switch_short: 中
+    current_short: EN
     switch_aria: Switch to the Chinese version
   profile:
     name: Zhihang Zhao
@@ -46,6 +50,8 @@ en:
   powered_by_suffix: "."
 
 "zh-CN":
+  seo:
+    keywords: Zhihang Zhao, 商业智能, 数据分析, 影石 Insta360, BI, 增长分析
   navigation:
     home: 首页
     experience: 工作经历
@@ -53,10 +59,12 @@ en:
     contact: 联系我
     blog: 博客
     switch_label: English
+    switch_short: EN
+    current_short: 中
     switch_aria: 切换到英文版本
   profile:
     name: Zhihang Zhao
-    position: 商业智能专员
+    position: 商业智能专员 · 数据分析师
     affiliation: 影石 Insta360
     portrait_alt: Zhihang Zhao 的个人照片
   links:
@@ -78,12 +86,12 @@ en:
     twitter: X 主页
   contact:
     title: 联系我
-    intro: 欢迎通过邮件或 LinkedIn 就项目合作、职业机会与专业交流联系我。
+    intro: 欢迎通过邮件或 LinkedIn 就项目合作、职业机会及行业话题交流联系。
     collaboration: 项目合作
     collaboration_detail: 数据分析、BI 体系建设与 AI 决策工作流
     collaboration_subject: "%E9%A1%B9%E7%9B%AE%E5%90%88%E4%BD%9C%E5%92%A8%E8%AF%A2"
     career: 职业机会
-    career_detail: 数据、商业智能相关岗位与团队交流
+    career_detail: 数据、商业智能与战略分析相关岗位交流
     career_subject: "%E8%81%8C%E4%B8%9A%E6%9C%BA%E4%BC%9A%E6%B2%9F%E9%80%9A"
     connect: 专业交流
     connect_detail: 行业观察、分析实践与经验探讨
